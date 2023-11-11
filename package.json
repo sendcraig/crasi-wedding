@@ -1,7 +1,7 @@
 {
   "name": "crasi-wedding",
   "version": "0.1.0",
-  "homepage": "https://github.com/sendcraig/crasi-wedding.git",
+  "homepage": "https://github.com/sendcraig/crasi-wedding",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
