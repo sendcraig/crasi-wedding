@@ -28,8 +28,6 @@ jobs:
         run: pnpm i
       - name: build app
         run: pnpm build
-        env:
-          PUBLIC_URL: /crasi-wedding
       - name: upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
