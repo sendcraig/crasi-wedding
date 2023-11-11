@@ -1,7 +1,7 @@
 {
   "name": "crasi-wedding",
   "version": "0.1.0",
-  "homepage": "https://sendcraig.github.io/crasi-wedding",
+  "homepage": "https://crasi.love",
   "private": true,
   "dependencies": {
     "@types/node": "^16.18.61",
