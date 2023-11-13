@@ -24,5 +24,6 @@
   ],
   "rules": {
     //add customize rules here as per your project's needs
+    "no-unused-vars": "warn"
   }
 }
