@@ -1,0 +1,35 @@
+/* Global styles */
+
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url("/assets/NotoSerifDisplay-VariableFont_wdth,wght.ttf") format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Noto Serif Display Italic";
+  src: url("/assets/NotoSerifDisplay-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
+}
+
+body {
+  /*background: linear-gradient(300deg, #c8ccc3, #ffffff, #e8eeda);*/
+  /*background-size: 200% 300%;*/
+  /*animation: gradient-animation 10s ease infinite;*/
+  font-family: "Noto Serif Display", "Noto Serif Display Italic", serif;
+}
+/* reset default CSS text styles */
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 12vh;
+}
+
+h2 {
+  font-size: 4vh;
+}
+
+h3 {
+  font-size: 1.5vh;
+}

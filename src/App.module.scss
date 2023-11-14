@@ -1,32 +1,13 @@
-// Global
-// ----------------
-
-@font-face {
-  font-family: "Noto Serif Display";
-  src: url("/assets/NotoSerifDisplay-VariableFont_wdth,wght.ttf") format("truetype-variations");
-}
-
-@font-face {
-  font-family: "Noto Serif Display Italic";
-  src: url("/assets/NotoSerifDisplay-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
-}
-
-body {
-  background: linear-gradient(300deg, #c8ccc3, #ffffff, #e8eeda);
-  background-size: 200% 300%;
-  animation: gradient-animation 10s ease infinite;
-}
-
 // Animations
 // ----------------
 
 
 .growOnHover {
-  font-variation-settings: "wght" 300, "wdth" 70;
+  font-variation-settings: "wght" 400, "wdth" 70;
   transition: font-variation-settings 0.3s ease;
 
   &:hover {
-    font-variation-settings: "wght" 400, "wdth" 62.5;
+    font-variation-settings: "wght" 500, "wdth" 75;
   }
 }
 
@@ -64,62 +45,58 @@ body {
   }
 }
 
-// Backgrounds
+// Layout
 // ----------------
 
 .container {
   width: 100vw;
-  //height: 100vh;
+  height: 100vh;
+
 }
 
-.imageBackgroundContainer {
-  position: absolute;
+.contentContainer {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  max-width: 1400px;
+  padding: 3vw 5vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 20%;
-}
-
-.gradientOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(225deg,rgba(255,255,255,0.8) 0%, rgba(234,237,225,0.3) 10%, rgba(255,255,255,0) 60%);
-}
-
-// Layout
+// Text styles
 // ----------------
 
-.gridCol {
-  height: 100vh;
-  padding: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heroTextContainer {
+
 }
 
-.title {
-  font-size: 48px;
-  align-self: flex-end;
-  text-align: center;
-  padding: 8px 16px 8px 8px;
-  background-color: rgba(170, 175, 153, 0.9);
-  animation: blurIn 1s ease-in-out;
+.heroText {
+  font-weight: 300;
 }
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  text-align: center;
+}
+
+.nameText {
+  font-size: 5vh;
+  font-weight: 300;
+  font-style: italic;
+
+}
+
+.bodyText {
+  font-weight: 300;
+  margin: 0 3vw;
+}
+
+
 
 .infoBoxContainer {
   background-color: rgba(170, 175, 153, 0.9);
