@@ -8,22 +8,17 @@ function App() {
     <div className={styles.container}>
       <Background />
       <div className={styles.contentContainer}>
-        <h1 className={cx(styles.heroText)}>WE</h1>
-        <div className={styles.mainTextContainer}>
-          <h3 className={styles.bodyText} style={{ alignSelf: 'flex-start' }}>
-            we joyfully invite you to
-            <br />
-            celebrate the wedding of
-          </h3>
-          <h2 className={styles.nameText}>Craig & Josi</h2>
-          <h3 className={styles.bodyText} style={{ alignSelf: 'flex-end' }}>
-            on <b>September 29th, 2024</b> <br />
-            at <b>Cambos Estate, Crete, Greece</b>
-          </h3>
+        <div className={styles.heroTextContainer}>
+          <h1 className={cx(styles.heroText)}>SAVE</h1>
+          <h2 className={styles.smallHeroText}>our</h2>
+          <h1 className={cx(styles.heroText)}>DATE</h1>
         </div>
-        <h1 className={cx(styles.heroText)} style={{ alignSelf: 'flex-end' }}>
-          DO
-        </h1>
+        <div className={styles.mainTextContainer}>
+          <h2 className={styles.nameText}>Craig & Josephin</h2>
+          <h3 className={styles.infoTextBold}>September 29th, 2024</h3>
+          <h3 className={styles.infoTextBold}>Cambos Estate, Crete, Greece</h3>
+          <h3 className={styles.infoText}>More information to follow</h3>
+        </div>
       </div>
     </div>
   );

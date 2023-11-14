@@ -51,13 +51,15 @@
 .container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 
 }
 
 .contentContainer {
   width: 100%;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
   padding: 3vw 5vw;
 
   display: flex;
@@ -69,11 +71,21 @@
 // ----------------
 
 .heroTextContainer {
-
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
 }
 
 .heroText {
+  font-size: min(15vw, 225px);
   font-weight: 300;
+}
+
+.smallHeroText {
+  font-size: min(5vw, 96px);
+  font-weight: 300;
+  font-style: italic;
 }
 
 .mainTextContainer {
@@ -82,21 +94,26 @@
   align-items: center;
   gap: 2vh;
   text-align: center;
+  margin-bottom: 5vh;
 }
 
 .nameText {
-  font-size: 5vh;
-  font-weight: 300;
+  font-size: 10vw;
+  font-weight: 100;
   font-style: italic;
 
 }
 
-.bodyText {
-  font-weight: 300;
+.infoTextBold {
+  font-size: 2.5vw;
+  font-weight: 700;
   margin: 0 3vw;
 }
 
-
+.infoText {
+  font-size: 2.5vw;
+  font-weight: 300;
+}
 
 .infoBoxContainer {
   background-color: rgba(170, 175, 153, 0.9);
