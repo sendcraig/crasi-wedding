@@ -1,124 +1,120 @@
-// Global
-// ----------------
-
-@font-face {
-  font-family: "Noto Serif Display";
-  src: url("/assets/NotoSerifDisplay-VariableFont_wdth,wght.ttf") format("truetype-variations");
-}
-
-@font-face {
-  font-family: "Noto Serif Display Italic";
-  src: url("/assets/NotoSerifDisplay-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
-}
-
-body {
-  background: linear-gradient(300deg, #c8ccc3, #ffffff, #e8eeda);
-  background-size: 200% 300%;
-  animation: gradient-animation 10s ease infinite;
-}
-
 // Animations
 // ----------------
 
-
 .growOnHover {
-  font-variation-settings: "wght" 300, "wdth" 70;
+  font-variation-settings: "wght" 400, "wdth" 70;
   transition: font-variation-settings 0.3s ease;
 
   &:hover {
-    font-variation-settings: "wght" 400, "wdth" 62.5;
-  }
-}
-
-@keyframes floatRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100vw + 100%));
+    font-variation-settings: "wght" 500, "wdth" 75;
   }
 }
 
 @keyframes blurIn {
   0% {
     transform: translateY(-10px);
-    background-color: rgba(170, 175, 153, 0.2);
     filter: blur(5px);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
-    background-color: rgba(170, 175, 153, 0.9);
     filter: blur(0);
   }
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-// Backgrounds
-// ----------------
-
-.container {
-  width: 100vw;
-  //height: 100vh;
-}
-
-.imageBackgroundContainer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 20%;
-}
-
-.gradientOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(225deg,rgba(255,255,255,0.8) 0%, rgba(234,237,225,0.3) 10%, rgba(255,255,255,0) 60%);
 }
 
 // Layout
 // ----------------
 
-.gridCol {
+.container {
+  width: 100vw;
   height: 100vh;
-  padding: 64px;
   display: flex;
-  align-items: center;
   justify-content: center;
+
 }
 
-.title {
-  font-size: 48px;
-  align-self: flex-end;
-  text-align: center;
-  padding: 8px 16px 8px 8px;
-  background-color: rgba(170, 175, 153, 0.9);
+.contentContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1800px;
+  padding: 3vw 5vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Text styles
+// ----------------
+
+.heroTextContainer {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
   animation: blurIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.heroText {
+  font-size: min(15vw, 225px);
+  font-weight: 300;
+}
+
+.smallHeroText {
+  font-size: min(5vw, 96px);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(4vh, 64px);
+  text-align: center;
+  margin-bottom: min(5vh, 48px);
+}
+
+.nameTextContainer {
+  display: flex;
+  align-items: baseline;
+  gap: min(3vw, 48px);
+  animation: blurIn 1s ease-in-out 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.nameText {
+  font-size: min(10vw, 108px);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ampersand {
+  font-size: min(6vw, 72px);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.infoTextContainer {
+  animation: blurIn 1s ease-in-out 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.infoTextBold {
+  font-size: min(4vw, 48px);
+  font-weight: 700;
+}
+
+.infoText {
+  font-size: min(2.5vw, 30px);
+  font-weight: 300;
+  animation: blurIn 1s ease-in-out 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .infoBoxContainer {
@@ -135,7 +131,7 @@ body {
   align-items: center;
   gap: 24px;
 
-  animation: blurIn 1s ease-in-out;
+
 }
 
 .infoBoxInfo {
