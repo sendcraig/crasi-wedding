@@ -1,7 +1,6 @@
 // Animations
 // ----------------
 
-
 .growOnHover {
   font-variation-settings: "wght" 400, "wdth" 70;
   transition: font-variation-settings 0.3s ease;
@@ -11,37 +10,15 @@
   }
 }
 
-@keyframes floatRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100vw + 100%));
-  }
-}
-
 @keyframes blurIn {
   0% {
     transform: translateY(-10px);
-    background-color: rgba(170, 175, 153, 0.2);
     filter: blur(5px);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
-    background-color: rgba(170, 175, 153, 0.9);
     filter: blur(0);
-  }
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
@@ -75,6 +52,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 3vw;
+  animation: blurIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .heroText {
@@ -100,7 +80,10 @@
 .nameTextContainer {
   display: flex;
   align-items: baseline;
-  gap: min(3vw, 48px)
+  gap: min(3vw, 48px);
+  animation: blurIn 1s ease-in-out 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .nameText {
@@ -115,6 +98,12 @@
   font-style: italic;
 }
 
+.infoTextContainer {
+  animation: blurIn 1s ease-in-out 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 .infoTextBold {
   font-size: min(4vw, 48px);
   font-weight: 700;
@@ -123,6 +112,9 @@
 .infoText {
   font-size: min(2.5vw, 30px);
   font-weight: 300;
+  animation: blurIn 1s ease-in-out 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .infoBoxContainer {
@@ -139,7 +131,7 @@
   align-items: center;
   gap: 24px;
 
-  animation: blurIn 1s ease-in-out;
+
 }
 
 .infoBoxInfo {
