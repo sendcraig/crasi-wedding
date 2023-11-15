@@ -82,7 +82,7 @@
 .nameTextContainer {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   gap: min(3vw, 48px);
   animation: blurIn 1s ease-in-out 1s;
   animation-fill-mode: forwards;
