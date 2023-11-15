@@ -50,7 +50,7 @@
 .heroTextContainer {
  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 3vw;
   animation: blurIn 1s ease-in-out;
   animation-fill-mode: forwards;
@@ -58,12 +58,14 @@
 }
 
 .heroText {
-  font-size: min(15vw, 225px);
+  font-size: min(15vw, 148px);
   font-weight: 300;
 }
 
 .smallHeroText {
-  font-size: min(5vw, 96px);
+  font-family: "Pinyon Script";
+  transform: skew(15deg);
+  font-size: min(8vw, 72px);
   font-weight: 300;
   font-style: italic;
 }
@@ -79,7 +81,8 @@
 
 .nameTextContainer {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: end;
   gap: min(3vw, 48px);
   animation: blurIn 1s ease-in-out 1s;
   animation-fill-mode: forwards;
@@ -87,15 +90,15 @@
 }
 
 .nameText {
-  font-size: min(10vw, 108px);
-  font-weight: 400;
-  font-style: italic;
+  font-size: min(10vw, 64px);
+  font-weight: 300;
+  //font-style: italic;
 }
 
 .ampersand {
-  font-size: min(6vw, 72px);
+  font-family: Italianno;
+  font-size: min(8vw, 48px);
   font-weight: 300;
-  font-style: italic;
 }
 
 .infoTextContainer {
@@ -105,13 +108,13 @@
 }
 
 .infoTextBold {
-  font-size: min(4vw, 48px);
+  font-size: min(4vw, 32px);
   font-weight: 700;
 }
 
 .infoText {
-  font-size: min(2.5vw, 30px);
-  font-weight: 300;
+  font-size: min(2.5vw, 20px);
+  font-weight: 200;
   animation: blurIn 1s ease-in-out 3s;
   animation-fill-mode: forwards;
   opacity: 0;

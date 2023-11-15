@@ -1,5 +1,5 @@
 import styles from './Background.module.scss';
-import image from './assets/img-1.jpg';
+import image from '../assets/images/img-1.jpg';
 import cx from 'classnames';
 import React, { ReactElement } from 'react';
 

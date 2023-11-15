@@ -20,6 +20,9 @@ dependencies:
   '@types/react-dom':
     specifier: ^18.2.15
     version: 18.2.15
+  animejs:
+    specifier: ^3.2.1
+    version: 3.2.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -3223,6 +3226,10 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+    dev: false
+
+  /animejs@3.2.1:
+    resolution: {integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==}
     dev: false
 
   /ansi-escapes@4.3.2:
