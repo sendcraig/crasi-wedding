@@ -12,21 +12,23 @@ export const SaveTheDate = (): ReactElement => {
           <h2 className={styles.smallHeroText}>our</h2>
           <h1 className={styles.heroText}>DATE</h1>
         </div>
-        <div className={styles.mainTextContainer}>
+        <div>
           <div className={styles.nameTextContainer}>
-            <h2 className={styles.nameText}>CRAIG</h2>
+            <h2 className={styles.nameText}>Craig</h2>
             <h3 className={styles.ampersand}>&</h3>
-            <h2 className={styles.nameText}>JOSEPHIN</h2>
+            <h2 className={styles.nameText}>Josephin</h2>
           </div>
           <div className={styles.infoTextContainer}>
-            <h3 className={styles.infoTextBold}>September 29th, 2024</h3>
-            <h3 className={styles.infoTextBold}>
-              Cambos Estate, Crete, Greece
+            <div className={styles.infoTextBoldContainer}>
+              <h3 className={styles.infoTextBold}>SEPTEMBER 29TH, 2024</h3>
+              <h3 className={styles.infoTextBold}>
+                CAMBOS ESTATE, CRETE, GREECE
+              </h3>
+            </div>
+            <h3 className={styles.infoText}>
+              OFFICIAL INVITATION & DETAILS TO FOLLOW
             </h3>
           </div>
-          <h3 className={styles.infoText}>
-            Official invitation & details to follow
-          </h3>
         </div>
       </div>
     </div>
