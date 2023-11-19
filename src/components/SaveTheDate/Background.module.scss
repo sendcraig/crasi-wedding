@@ -13,15 +13,15 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 20%;
-  filter: brightness(110%);
+  filter: brightness(120%);
   transform: scaleX(-1);
 }
 
 .gradientOverlay {
-  background: linear-gradient(170deg,rgba(255,255,255,0.9) 0%, rgba(255, 255, 255, 0.35) 20%, rgba(255, 255, 255, 0.35) 90%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(170deg,rgba(255,255,255,0.9) 0%, rgba(255, 255, 255, 0.35) 20%, rgba(255, 255, 255, 0.35) 80%, rgba(255, 255, 255, 0.6) 100%);
 }
 
 .darkFilter {
   background: #000000;
-  opacity: 0.5;
+  opacity: 0.65;
 }
