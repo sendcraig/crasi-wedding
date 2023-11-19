@@ -1,12 +1,12 @@
 // Animations
 // ----------------
 
-.growOnHover {
-  font-variation-settings: "wght" 400, "wdth" 70;
+.boldOnHover {
+  font-variation-settings: "wght" 330;
   transition: font-variation-settings 0.3s ease;
 
   &:hover {
-    font-variation-settings: "wght" 500, "wdth" 75;
+    font-variation-settings: "wght" 500;
   }
 }
 
@@ -131,7 +131,7 @@
   font-family: "Josefin Sans";
   font-size: min(3vw, 24px);
   letter-spacing: 0.1em;
-  font-weight: 320;
+  font-weight: 330;
   text-shadow: 0px 4px 24px rgba(0,0,0,0.5);
 }
 

@@ -1,6 +1,10 @@
 import React, { ReactElement } from 'react';
 import styles from './SaveTheDate.module.scss';
 import { Background } from './Background';
+import { Link } from '../Link/Link';
+import { CalendarLink } from '../Link/CalendarLink';
+import { hasTouchSupport } from '../utils';
+import cx from 'classnames';
 
 export const SaveTheDate = (): ReactElement => {
   return (
@@ -20,9 +24,23 @@ export const SaveTheDate = (): ReactElement => {
           </div>
           <div className={styles.infoTextContainer}>
             <div className={styles.infoTextBoldContainer}>
-              <h3 className={styles.infoTextBold}>SEPTEMBER 29TH, 2024</h3>
-              <h3 className={styles.infoTextBold}>
-                CAMBOS ESTATE, CRETE, GREECE
+              <h3
+                className={cx(styles.infoTextBold, {
+                  [styles.boldOnHover]: !hasTouchSupport(),
+                })}
+              >
+                <CalendarLink text={'SEPTEMBER 29, 2024'} />
+              </h3>
+
+              <h3
+                className={cx(styles.infoTextBold, {
+                  [styles.boldOnHover]: !hasTouchSupport(),
+                })}
+              >
+                <Link
+                  url={'https://maps.app.goo.gl/b7e7xYdP1ypEaHDN8'}
+                  text={'CAMBOS ESTATE, CRETE, GREECE'}
+                />
               </h3>
             </div>
             <h3 className={styles.infoText}>

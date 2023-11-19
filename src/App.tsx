@@ -1,5 +1,5 @@
 import React from 'react';
-import { SaveTheDate } from './SaveTheDate/SaveTheDate';
+import { SaveTheDate } from './components/SaveTheDate/SaveTheDate';
 
 function App() {
   return <SaveTheDate />;
