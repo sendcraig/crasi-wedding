@@ -1,8 +1,8 @@
 import React from 'react';
-import { SaveTheDate } from './components/SaveTheDate/SaveTheDate';
+import { Outlet } from '@tanstack/react-router';
 
 function App() {
-  return <SaveTheDate />;
+  return <Outlet />;
 }
 
 export default App;
