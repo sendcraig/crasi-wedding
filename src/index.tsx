@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '@mantine/core/styles.css';
 import './global.module.scss';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
+  Outlet,
   RootRoute,
   Route,
   Router,
@@ -14,7 +14,7 @@ import { SaveTheDate } from './components/SaveTheDate/SaveTheDate';
 import { InfoWebsite } from './components/InfoWebsite/InfoWebsite';
 
 const rootRoute = new RootRoute({
-  component: App,
+  component: Outlet,
 });
 
 const stdRoute = new Route({

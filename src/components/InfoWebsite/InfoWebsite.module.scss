@@ -1,0 +1,24 @@
+:local {
+  .container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabs {
+    background-color: #FBF9F6;
+    top: 0;
+    position: sticky;
+    // todo - box-shadow when scrolled
+  }
+
+  .tab {
+    border-radius: 0;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: #eeebe7;
+    }
+  }
+
+}
