@@ -5,12 +5,29 @@ import { InfoSection } from '../InfoSection/InfoSection';
 import { useScrollIntoView } from '@mantine/hooks';
 import styles from './InfoWebsite.module.scss';
 import { HeroSection } from '../HeroSection/HeroSection';
+import { OurStory } from '../sections/OurStory';
+import { OurWedding } from '../sections/OurWedding';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
   headings: {
     fontFamily: 'Italianno',
     fontWeight: '500',
+    sizes: {
+      h1: { fontSize: '64px' },
+      h2: { fontSize: '56px' },
+      h3: { fontSize: '48px' },
+      h4: { fontSize: '40px' },
+      h5: { fontSize: '32px' },
+      h6: { fontSize: '24px' },
+    },
+  },
+  fontSizes: {
+    xs: '12px',
+    sm: '16px',
+    md: '18px',
+    lg: '24px',
+    xl: '28px',
   },
 });
 
@@ -99,8 +116,8 @@ export const InfoWebsite = (): ReactNode => {
           </Tabs.List>
         </Tabs>
 
-        <InfoSection title={'Our Story'} scrollRef={ourStoryScrollRef} />
-        <InfoSection title={'Our Wedding'} scrollRef={ourWeddingScrollRef} />
+        <OurStory scrollRef={ourStoryScrollRef} />
+        <OurWedding scrollRef={ourWeddingScrollRef} />
         <InfoSection title={'Itinerary'} scrollRef={itineraryScrollRef} />
         <InfoSection title={'Travel'} scrollRef={travelScrollRef} />
         <InfoSection title={'Things To Do'} scrollRef={thingsToDoScrollRef} />

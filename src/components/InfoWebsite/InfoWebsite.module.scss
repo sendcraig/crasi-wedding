@@ -10,12 +10,15 @@
     background-color: #FBF9F6;
     top: 0;
     position: sticky;
+    z-index: 1;
     // todo - box-shadow when scrolled
   }
 
   .tab {
     border-radius: 0;
+    font-weight: 300;
     transition: background-color 0.2s ease-in-out;
+
     &:hover {
       background-color: #eeebe7;
     }

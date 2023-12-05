@@ -1,0 +1,28 @@
+.sectionContainer {
+  position: relative;
+  height: calc(60vh - 128px);
+}
+
+.text {
+  position: relative;
+  height: 100%;
+  padding: 48px 0;
+  margin-top: -16px;
+}
+
+.rect1 {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(251, 249, 246, 0.65);
+}
+
+.rect2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(251, 249, 246, 0.65);
+}
