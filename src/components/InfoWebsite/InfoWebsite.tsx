@@ -7,6 +7,7 @@ import styles from './InfoWebsite.module.scss';
 import { HeroSection } from '../HeroSection/HeroSection';
 import { OurStory } from '../sections/OurStory';
 import { OurWedding } from '../sections/OurWedding';
+import { Itinerary } from '../sections/Itinerary';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -33,23 +34,23 @@ const theme = createTheme({
 
 export const InfoWebsite = (): ReactNode => {
   const { scrollIntoView: ourStoryScroll, targetRef: ourStoryScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: ourWeddingScroll, targetRef: ourWeddingScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: itineraryScroll, targetRef: itineraryScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: travelScroll, targetRef: travelScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: thingsToDoScroll, targetRef: thingsToDoScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const {
     scrollIntoView: giftsRegistryScroll,
     targetRef: giftsRegistryScrollRef,
-  } = useScrollIntoView<HTMLDivElement>({});
+  } = useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: rsvpScroll, targetRef: rsvpScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
   const { scrollIntoView: faqScroll, targetRef: faqScrollRef } =
-    useScrollIntoView<HTMLDivElement>({});
+    useScrollIntoView<HTMLDivElement>({ offset: 64 });
 
   return (
     <MantineProvider theme={theme}>
@@ -59,56 +60,56 @@ export const InfoWebsite = (): ReactNode => {
           <Tabs.List justify="center">
             <Tabs.Tab
               value={'our-story'}
-              onClick={() => ourStoryScroll({ alignment: 'center' })}
+              onClick={() => ourStoryScroll()}
               className={styles.tab}
             >
               Our Story
             </Tabs.Tab>
             <Tabs.Tab
               value={'wedding-details'}
-              onClick={() => ourWeddingScroll({ alignment: 'center' })}
+              onClick={() => ourWeddingScroll()}
               className={styles.tab}
             >
               Our Wedding
             </Tabs.Tab>
             <Tabs.Tab
               value={'itinerary'}
-              onClick={() => itineraryScroll({ alignment: 'center' })}
+              onClick={() => itineraryScroll()}
               className={styles.tab}
             >
               Itinerary
             </Tabs.Tab>
             <Tabs.Tab
               value={'travel'}
-              onClick={() => travelScroll({ alignment: 'center' })}
+              onClick={() => travelScroll()}
               className={styles.tab}
             >
               Travel
             </Tabs.Tab>
             <Tabs.Tab
               value={'things-to-do'}
-              onClick={() => thingsToDoScroll({ alignment: 'center' })}
+              onClick={() => thingsToDoScroll()}
               className={styles.tab}
             >
               Things To Do
             </Tabs.Tab>
             <Tabs.Tab
               value={'gifts-registry'}
-              onClick={() => giftsRegistryScroll({ alignment: 'center' })}
+              onClick={() => giftsRegistryScroll()}
               className={styles.tab}
             >
               Gifts & Registry
             </Tabs.Tab>
             <Tabs.Tab
               value={'rsvp'}
-              onClick={() => rsvpScroll({ alignment: 'center' })}
+              onClick={() => rsvpScroll()}
               className={styles.tab}
             >
               RSVP
             </Tabs.Tab>
             <Tabs.Tab
               value={'faq'}
-              onClick={() => faqScroll({ alignment: 'center' })}
+              onClick={() => faqScroll()}
               className={styles.tab}
             >
               FAQ
@@ -118,7 +119,7 @@ export const InfoWebsite = (): ReactNode => {
 
         <OurStory scrollRef={ourStoryScrollRef} />
         <OurWedding scrollRef={ourWeddingScrollRef} />
-        <InfoSection title={'Itinerary'} scrollRef={itineraryScrollRef} />
+        <Itinerary scrollRef={itineraryScrollRef} />
         <InfoSection title={'Travel'} scrollRef={travelScrollRef} />
         <InfoSection title={'Things To Do'} scrollRef={thingsToDoScrollRef} />
         <InfoSection

@@ -11,12 +11,12 @@
     top: 0;
     position: sticky;
     z-index: 1;
-    // todo - box-shadow when scrolled
   }
 
   .tab {
     border-radius: 0;
-    font-weight: 300;
+    font-weight: 375;
+    height: 64px;
     transition: background-color 0.2s ease-in-out;
 
     &:hover {

@@ -1,15 +1,18 @@
 import React, { ReactElement } from 'react';
 import styles from './HeroSection.module.scss';
-import { Center, Title } from '@mantine/core';
+import { Stack, Title } from '@mantine/core';
 
 export const HeroSection = (): ReactElement => {
   return (
     <div className={styles.heroContainer}>
-      <Center>
-        <Title size={108} c={'#696969'}>
-          Welcome
+      <Stack justify={'center'} align={'center'}>
+        <Title size={144} ff={'Beautifully Delicious Bold'}>
+          Craig & Josephin
         </Title>
-      </Center>
+        <Title order={5} ff={'Noto Serif'}>
+          are getting married.
+        </Title>
+      </Stack>
     </div>
   );
 };
