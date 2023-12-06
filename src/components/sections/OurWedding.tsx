@@ -22,7 +22,7 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
             className={styles.text}
           >
             <Title order={3}>Our Wedding</Title>
-            <BodyStretch>on the</BodyStretch>
+            <BodyStretch>is on the</BodyStretch>
             <SubHeadingLight>29th of September, 2024</SubHeadingLight>
             <BodyStretch>at</BodyStretch>
             <SubHeadingLight>Cambos Estate, Chania, Greece</SubHeadingLight>

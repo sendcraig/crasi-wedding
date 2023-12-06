@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider, Stack, Tabs } from '@mantine/core';
-import { InfoSection } from '../InfoSection/InfoSection';
 import { useIntersection, useScrollIntoView } from '@mantine/hooks';
 import styles from './InfoWebsite.module.scss';
 import { HeroSection } from '../HeroSection/HeroSection';
@@ -12,6 +11,9 @@ import cx from 'classnames';
 import { Travel } from '../sections/Travel';
 import { ImageSection } from '../sections/ImageSection';
 import { ThingsToDo } from '../sections/ThingsToDo';
+import { GiftsRegistry } from '../sections/GiftsRegistry';
+import { RSVP } from '../sections/RSVP';
+import { FAQ } from '../sections/FAQ';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -70,7 +72,7 @@ export const InfoWebsite = (): ReactNode => {
           allowTabDeactivation
           ref={tabIntsersectionRef}
         >
-          <Tabs.List justify="center">
+          <Tabs.List className={styles.tabList}>
             <Tabs.Tab
               value={'our-story'}
               onClick={() => ourStoryScroll()}
@@ -136,12 +138,9 @@ export const InfoWebsite = (): ReactNode => {
         <Travel scrollRef={travelScrollRef} />
         <ImageSection />
         <ThingsToDo scrollRef={thingsToDoScrollRef} />
-        <InfoSection
-          title={'Gifts & Registry'}
-          scrollRef={giftsRegistryScrollRef}
-        />
-        <InfoSection title={'RSVP'} scrollRef={rsvpScrollRef} />
-        <InfoSection title={'FAQs'} scrollRef={faqScrollRef} />
+        <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
+        <RSVP scrollRef={rsvpScrollRef} />
+        <FAQ scrollRef={faqScrollRef} />
       </Stack>
     </MantineProvider>
   );

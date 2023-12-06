@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Center, Grid, Stack, Title } from '@mantine/core';
+import { Center, Grid, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import { Body, SubHeading } from '../typography/Typography';
+import { Body, SectionTitle, SubHeading } from '../typography/Typography';
 import styles from './ThingsToDo.module.scss';
 import { useMediaQuery } from '@mantine/hooks';
 
@@ -51,11 +51,7 @@ export const ThingsToDo = ({ scrollRef }: Props): ReactElement => {
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack px={isSmallWidth ? 0 : 64}>
-        <Center>
-          <Title order={3} pb={48}>
-            Things To Do
-          </Title>
-        </Center>
+        <SectionTitle center>Things To Do</SectionTitle>
         <Grid grow gutter={72}>
           {THINGS_TO_DO_SECTIONS.map((section, idx) => (
             <Grid.Col
