@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Flex, Grid, Group, Image, Stack, Text } from '@mantine/core';
+import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
@@ -107,15 +107,13 @@ type Props = {
 
 export const Itinerary = ({ scrollRef }: Props): ReactElement => {
   return (
-    <InfoSection scrollRef={scrollRef} backgroundColor={'#E1DFDC'} noPadding>
+    <InfoSection scrollRef={scrollRef} noPadding>
       <Grid>
-        <Grid.Col
-          span={{ base: 12, sm: 9, md: 9, lg: 8 }}
-          py={0}
-          pl={64}
-          pr={32}
-        >
+        <Grid.Col span={{ xs: 12, sm: 9, lg: 8 }} py={0} pl={64} pr={32}>
           <Stack py={64} gap={32}>
+            <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
+              Itinerary
+            </Title>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
                 <Date text={date.date} />
@@ -139,11 +137,11 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
             ))}
           </Stack>
         </Grid.Col>
-        <Grid.Col span={{ base: 0, sm: 3, md: 3 }} py={0}>
+        <Grid.Col span={{ xs: 0, sm: 3 }} py={0}>
           <Image src={southAfricaImage} className={styles.sidebarImage} />
         </Grid.Col>
         <Grid.Col span={{ lg: 1 }} py={0}>
-          <Flex bg={'#E1DFDC'} h={'100%'} />
+          <Flex h={'100%'} />
         </Grid.Col>
       </Grid>
     </InfoSection>
