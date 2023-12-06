@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SubHeading } from '../typography/Typography';
+import { useMediaQuery } from '@mantine/hooks';
 
 const TRAVEL_SECTIONS = [
   {
@@ -23,9 +24,11 @@ type Props = {
 };
 
 export const Travel = ({ scrollRef }: Props): ReactElement => {
+  const isSmallWidth = useMediaQuery('(max-width: 767px)');
+
   return (
     <InfoSection scrollRef={scrollRef}>
-      <Stack px={64}>
+      <Stack px={isSmallWidth ? 0 : 64}>
         <Title order={3} style={{ alignSelf: 'flex-end' }}>
           Travel
         </Title>
