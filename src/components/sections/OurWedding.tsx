@@ -1,8 +1,9 @@
 import React, { ReactElement } from 'react';
-import { Center, Stack, Text, Title } from '@mantine/core';
+import { Center, Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import oliveGroveImage from '../../assets/images/olive-grove-2.png';
 import styles from './OurWedding.module.scss';
+import { BodyStretch, SubHeadingLight } from '../typography/Typography';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
@@ -21,18 +22,10 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
             className={styles.text}
           >
             <Title order={3}>Our Wedding</Title>
-            <Text fw={300} lts={2}>
-              on the
-            </Text>
-            <Text fw={320} size={'lg'} lts={2}>
-              29th of September, 2024
-            </Text>
-            <Text fw={300} lts={2}>
-              at
-            </Text>
-            <Text fw={320} size={'lg'} lts={2}>
-              Cambos Estate, Chania, Greece
-            </Text>
+            <BodyStretch>on the</BodyStretch>
+            <SubHeadingLight>29th of September, 2024</SubHeadingLight>
+            <BodyStretch>at</BodyStretch>
+            <SubHeadingLight>Cambos Estate, Chania, Greece</SubHeadingLight>
           </Stack>
         </Center>
       </div>

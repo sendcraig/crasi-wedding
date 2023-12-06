@@ -9,6 +9,9 @@ import { OurStory } from '../sections/OurStory';
 import { OurWedding } from '../sections/OurWedding';
 import { Itinerary } from '../sections/Itinerary';
 import cx from 'classnames';
+import { Travel } from '../sections/Travel';
+import { ImageSection } from '../sections/ImageSection';
+import { ThingsToDo } from '../sections/ThingsToDo';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -130,8 +133,9 @@ export const InfoWebsite = (): ReactNode => {
         <OurStory scrollRef={ourStoryScrollRef} />
         <OurWedding scrollRef={ourWeddingScrollRef} />
         <Itinerary scrollRef={itineraryScrollRef} />
-        <InfoSection title={'Travel'} scrollRef={travelScrollRef} />
-        <InfoSection title={'Things To Do'} scrollRef={thingsToDoScrollRef} />
+        <Travel scrollRef={travelScrollRef} />
+        <ImageSection />
+        <ThingsToDo scrollRef={thingsToDoScrollRef} />
         <InfoSection
           title={'Gifts & Registry'}
           scrollRef={giftsRegistryScrollRef}

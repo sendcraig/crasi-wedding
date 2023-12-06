@@ -1,8 +1,9 @@
 import React, { ReactElement } from 'react';
-import { Flex, Grid, Group, Image, Stack, Text } from '@mantine/core';
+import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
+import { Body, SubHeading } from '../typography/Typography';
 
 type ItineraryInfo = {
   date: string;
@@ -67,7 +68,7 @@ const ITINERARY_INFO: ItineraryInfo = [
   },
 ];
 
-const Subtitle = ({
+const EventDetails = ({
   title,
   time,
   trailing,
@@ -77,7 +78,7 @@ const Subtitle = ({
   trailing: string;
 }): ReactElement => {
   return (
-    <Group gap={16} pt={16}>
+    <Group gap={12} pt={16}>
       <Text fw={350}>{title}</Text>
       {['•', time, '•', trailing].map((text, idx) => (
         <Text
@@ -93,57 +94,45 @@ const Subtitle = ({
   );
 };
 
-const Date = ({ text }: { text: string }): ReactElement => {
-  return (
-    <Text size={'lg'} className={styles.date} pb={4}>
-      {text}
-    </Text>
-  );
-};
-
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
 };
 
 export const Itinerary = ({ scrollRef }: Props): ReactElement => {
   return (
-    <InfoSection scrollRef={scrollRef} backgroundColor={'#E1DFDC'} noPadding>
+    <InfoSection scrollRef={scrollRef} noPadding>
       <Grid>
-        <Grid.Col
-          span={{ base: 12, sm: 9, md: 9, lg: 8 }}
-          py={0}
-          pl={64}
-          pr={32}
-        >
+        <Grid.Col span={{ xs: 12, sm: 9, lg: 8 }} py={0} pl={64} pr={32}>
           <Stack py={64} gap={32}>
+            <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
+              Itinerary
+            </Title>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
-                <Date text={date.date} />
+                <SubHeading className={styles.date}>{date.date}</SubHeading>
                 {date.events.map((event) => (
                   <Stack
                     key={`${date.date}-event-${event.title}`}
                     className={styles.dateDetails}
                     pb={16}
                   >
-                    <Subtitle
+                    <EventDetails
                       title={event.title}
                       time={event.time}
                       trailing={event.trailing}
                     />
-                    <Text lts={0.5} fw={300}>
-                      {event.details}
-                    </Text>
+                    <Body>{event.details}</Body>
                   </Stack>
                 ))}
               </Stack>
             ))}
           </Stack>
         </Grid.Col>
-        <Grid.Col span={{ base: 0, sm: 3, md: 3 }} py={0}>
+        <Grid.Col span={{ xs: 0, sm: 3 }} py={0}>
           <Image src={southAfricaImage} className={styles.sidebarImage} />
         </Grid.Col>
         <Grid.Col span={{ lg: 1 }} py={0}>
-          <Flex bg={'#E1DFDC'} h={'100%'} />
+          <Flex h={'100%'} />
         </Grid.Col>
       </Grid>
     </InfoSection>
