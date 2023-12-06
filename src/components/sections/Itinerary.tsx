@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
 import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { InfoSection } from '../InfoSection/InfoSection';
+import { Body, SubHeading } from '../typography/Typography';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
-import { Body, SubHeading } from '../typography/Typography';
 
 type ItineraryInfo = {
   date: string;
@@ -99,10 +100,17 @@ type Props = {
 };
 
 export const Itinerary = ({ scrollRef }: Props): ReactElement => {
+  const isSmallWidth = useMediaQuery('(max-width: 767px)');
+
   return (
     <InfoSection scrollRef={scrollRef} noPadding>
       <Grid>
-        <Grid.Col span={{ xs: 12, sm: 9, lg: 8 }} py={0} pl={64} pr={32}>
+        <Grid.Col
+          span={{ xs: 12, sm: 9, lg: 8 }}
+          py={0}
+          pl={isSmallWidth ? 40 : 64}
+          pr={32}
+        >
           <Stack py={64} gap={32}>
             <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
               Itinerary
@@ -121,7 +129,7 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
                       time={event.time}
                       trailing={event.trailing}
                     />
-                    <Body>{event.details}</Body>
+                    <Body justify>{event.details}</Body>
                   </Stack>
                 ))}
               </Stack>

@@ -1,7 +1,8 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
 import styles from './InfoSection.module.scss';
-import { Image, Title } from '@mantine/core';
+import { Image } from '@mantine/core';
 import cx from 'classnames';
+import { SectionTitle } from '../typography/Typography';
 
 type Props = {
   title?: string;
@@ -30,7 +31,7 @@ export const InfoSection = ({
       {backgroundImage && (
         <Image src={backgroundImage} className={styles.backgroundImage} />
       )}
-      {title && <Title order={3}>{title}</Title>}
+      {title && <SectionTitle>{title}</SectionTitle>}
       {children}
     </div>
   );

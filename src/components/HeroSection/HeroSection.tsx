@@ -6,7 +6,11 @@ export const HeroSection = (): ReactElement => {
   return (
     <div className={styles.heroContainer}>
       <Stack justify={'center'} align={'center'}>
-        <Title size={144} ff={'Beautifully Delicious Bold'}>
+        <Title
+          size={144}
+          ff={'Beautifully Delicious Bold'}
+          style={{ textAlign: 'center' }}
+        >
           Craig & Josephin
         </Title>
         <Title order={5} ff={'Noto Serif'}>

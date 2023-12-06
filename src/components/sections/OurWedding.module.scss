@@ -5,25 +5,22 @@
 
 .text {
   position: relative;
-  height: 100%;
-  padding: 48px;
-  margin-top: -16px;
+  padding: 32px;
   text-align: center;
 }
 
 .rect1 {
   position: absolute;
-  left: 10%;
-  width: 80%;
-  height: 100%;
+  top: -5%;
+  height: 110%;
+  width: 100%;
   background-color: rgba(251, 249, 246, 0.65);
 }
 
 .rect2 {
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
+  left: -5%;
+  width: 110%;
+  height: 100%;
   background-color: rgba(251, 249, 246, 0.65);
 }

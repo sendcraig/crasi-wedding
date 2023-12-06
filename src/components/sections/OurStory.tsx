@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import { Image, Stack, Title } from '@mantine/core';
+import { Image, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import parisImage from '../../assets/images/paris.png';
-import { Body } from '../typography/Typography';
+import { Body, SectionTitle } from '../typography/Typography';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
@@ -11,9 +11,9 @@ type Props = {
 export const OurStory = ({ scrollRef }: Props): ReactElement => {
   return (
     <InfoSection scrollRef={scrollRef}>
-      <Stack>
+      <Stack gap={0}>
         <Image src={parisImage} pb={32} />
-        <Title order={3}>Our Story</Title>
+        <SectionTitle>Our Story</SectionTitle>
         <Body>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eget scelerisque felis, quis venenatis dolor. Cras laoreet nulla eget
