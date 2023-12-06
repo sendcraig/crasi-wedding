@@ -9,7 +9,7 @@
 
 .dateDetails {
   padding-left: 38px;
-  border-left: 2px solid rgba(0, 0, 0, 0.15);
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .sidebarImage {
@@ -18,6 +18,6 @@
   object-fit: cover;
   object-position: 55% 50%;
   filter: grayscale(100%)  contrast(115%);
-  border-left: 4px solid rgba(0, 0, 0, 0.4);
-  border-right: 4px solid rgba(0, 0, 0, 0.4);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
 }

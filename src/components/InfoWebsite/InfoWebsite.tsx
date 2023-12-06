@@ -2,12 +2,13 @@ import React, { ReactNode } from 'react';
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider, Stack, Tabs } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import { useScrollIntoView } from '@mantine/hooks';
+import { useIntersection, useScrollIntoView } from '@mantine/hooks';
 import styles from './InfoWebsite.module.scss';
 import { HeroSection } from '../HeroSection/HeroSection';
 import { OurStory } from '../sections/OurStory';
 import { OurWedding } from '../sections/OurWedding';
 import { Itinerary } from '../sections/Itinerary';
+import cx from 'classnames';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -52,11 +53,20 @@ export const InfoWebsite = (): ReactNode => {
   const { scrollIntoView: faqScroll, targetRef: faqScrollRef } =
     useScrollIntoView<HTMLDivElement>({ offset: 64 });
 
+  const { ref: tabIntsersectionRef, entry } = useIntersection({ threshold: 1 });
+
   return (
     <MantineProvider theme={theme}>
       <Stack gap={0}>
         <HeroSection />
-        <Tabs value={null} className={styles.tabs} allowTabDeactivation>
+        <Tabs
+          value={null}
+          className={cx(styles.tabs, {
+            [styles.stuck]: !entry?.isIntersecting,
+          })}
+          allowTabDeactivation
+          ref={tabIntsersectionRef}
+        >
           <Tabs.List justify="center">
             <Tabs.Tab
               value={'our-story'}

@@ -77,21 +77,21 @@ const Subtitle = ({
   trailing: string;
 }): ReactElement => {
   return (
-    <Group gap={24} pt={16}>
+    <Group gap={16} pt={16}>
       <Text fw={350}>{title}</Text>
-      <Text c={'#808080'} fs="italic" fw={320}>
-        {time}
-      </Text>
-      <Text c={'#808080'} fs="italic" fw={320}>
-        {trailing}
-      </Text>
+      {['•', time, '•', trailing].map((text) => (
+        // eslint-disable-next-line react/jsx-key
+        <Text c={'#555555'} fs="italic" fw={320}>
+          {text}
+        </Text>
+      ))}
     </Group>
   );
 };
 
 const Date = ({ text }: { text: string }): ReactElement => {
   return (
-    <Text size={'lg'} className={styles.date}>
+    <Text size={'lg'} className={styles.date} pb={4}>
       {text}
     </Text>
   );
@@ -113,12 +113,13 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
         >
           <Stack py={64} gap={32}>
             {ITINERARY_INFO.map((date) => (
-              <Stack gap={12} key={`${date.date}`}>
+              <Stack gap={0} key={`${date.date}`}>
                 <Date text={date.date} />
                 {date.events.map((event) => (
                   <Stack
                     key={`${date.date}-event-${event.title}`}
                     className={styles.dateDetails}
+                    pb={16}
                   >
                     <Subtitle
                       title={event.title}
