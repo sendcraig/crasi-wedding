@@ -3,6 +3,7 @@ import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
+import { Body, SubHeading } from '../typography/Typography';
 
 type ItineraryInfo = {
   date: string;
@@ -67,7 +68,7 @@ const ITINERARY_INFO: ItineraryInfo = [
   },
 ];
 
-const Subtitle = ({
+const EventDetails = ({
   title,
   time,
   trailing,
@@ -77,7 +78,7 @@ const Subtitle = ({
   trailing: string;
 }): ReactElement => {
   return (
-    <Group gap={16} pt={16}>
+    <Group gap={12} pt={16}>
       <Text fw={350}>{title}</Text>
       {['•', time, '•', trailing].map((text, idx) => (
         <Text
@@ -90,14 +91,6 @@ const Subtitle = ({
         </Text>
       ))}
     </Group>
-  );
-};
-
-const Date = ({ text }: { text: string }): ReactElement => {
-  return (
-    <Text size={'lg'} className={styles.date} pb={4}>
-      {text}
-    </Text>
   );
 };
 
@@ -116,21 +109,19 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
             </Title>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
-                <Date text={date.date} />
+                <SubHeading className={styles.date}>{date.date}</SubHeading>
                 {date.events.map((event) => (
                   <Stack
                     key={`${date.date}-event-${event.title}`}
                     className={styles.dateDetails}
                     pb={16}
                   >
-                    <Subtitle
+                    <EventDetails
                       title={event.title}
                       time={event.time}
                       trailing={event.trailing}
                     />
-                    <Text lts={0.5} fw={300}>
-                      {event.details}
-                    </Text>
+                    <Body>{event.details}</Body>
                   </Stack>
                 ))}
               </Stack>

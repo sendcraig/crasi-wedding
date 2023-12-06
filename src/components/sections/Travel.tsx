@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Stack, Text, Title } from '@mantine/core';
+import { Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
+import { Body, SubHeading } from '../typography/Typography';
 
 const TRAVEL_SECTIONS = [
   {
@@ -17,25 +18,6 @@ const TRAVEL_SECTIONS = [
   },
 ];
 
-const TravelSection = ({
-  title,
-  body,
-}: {
-  title: string;
-  body: string;
-}): ReactElement => {
-  return (
-    <Stack>
-      <Text size={'lg'} pb={4}>
-        {title}
-      </Text>
-      <Text lts={0.5} fw={300}>
-        {body}
-      </Text>
-    </Stack>
-  );
-};
-
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
 };
@@ -48,11 +30,10 @@ export const Travel = ({ scrollRef }: Props): ReactElement => {
           Travel
         </Title>
         {TRAVEL_SECTIONS.map((section, idx) => (
-          <TravelSection
-            key={`travel-section-${idx}`}
-            title={section.title}
-            body={section.body}
-          />
+          <Stack key={`travel-section-${idx}`}>
+            <SubHeading>{section.title}</SubHeading>
+            <Body>{section.body}</Body>
+          </Stack>
         ))}
       </Stack>
     </InfoSection>

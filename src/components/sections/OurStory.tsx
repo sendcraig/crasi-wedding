@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
-import { Image, Stack, Text, Title } from '@mantine/core';
+import { Image, Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import parisImage from '../../assets/images/paris.png';
+import { Body } from '../typography/Typography';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
@@ -13,7 +14,7 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
       <Stack>
         <Image src={parisImage} pb={32} />
         <Title order={3}>Our Story</Title>
-        <Text fw={300}>
+        <Body>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eget scelerisque felis, quis venenatis dolor. Cras laoreet nulla eget
           est viverra, non posuere leo accumsan. Nunc maximus aliquam elit
@@ -32,7 +33,7 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
           eu magna convallis, quis mollis orci fermentum. Nunc auctor elit id mi
           facilisis feugiat. Suspendisse velit lorem, finibus non pharetra non,
           scelerisque vel dolor.
-        </Text>
+        </Body>
       </Stack>
     </InfoSection>
   );
