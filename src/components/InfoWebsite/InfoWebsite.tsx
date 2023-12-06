@@ -72,7 +72,7 @@ export const InfoWebsite = (): ReactNode => {
           allowTabDeactivation
           ref={tabIntsersectionRef}
         >
-          <Tabs.List justify="center">
+          <Tabs.List className={styles.tabList}>
             <Tabs.Tab
               value={'our-story'}
               onClick={() => ourStoryScroll()}

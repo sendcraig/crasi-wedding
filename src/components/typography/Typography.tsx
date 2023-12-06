@@ -25,14 +25,18 @@ export const SectionTitle = ({
 
 export const SubHeading = ({
   className,
+  justify = false,
   children,
-}: PropsWithChildren<{ className?: string }>): ReactElement => {
+}: PropsWithChildren<{
+  className?: string;
+  justify?: boolean;
+}>): ReactElement => {
   const isSmallWidth = useMediaQuery('(max-width: 767px)');
   return (
     <Text
       size={'lg'}
       pb={4}
-      style={{ textAlign: isSmallWidth ? 'center' : 'initial' }}
+      style={{ textAlign: isSmallWidth && !justify ? 'center' : 'initial' }}
       className={className}
     >
       {children}

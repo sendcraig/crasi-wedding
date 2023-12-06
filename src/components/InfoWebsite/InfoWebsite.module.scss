@@ -11,10 +11,49 @@
     top: -1px; // trick intersection observer to thinking we're off screen
     position: sticky;
     z-index: 1;
-    //overflow: hidden;
+    overflow: scroll;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &.stuck {
       box-shadow: 0 8px 24px -10px rgba(0,0,0,0.2);
+    }
+
+    //&.leftShadow {
+    //  box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
+    //
+    //  &.rightShadow {
+    //    box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6), inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
+    //  }
+    //}
+    //
+    //&.rightShadow {
+    //  box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
+    //
+    //  &.leftShadow {
+    //    box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6), inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
+    //  }
+    //}
+  }
+
+  .tabList {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: fit-content;
+    min-width: 100%;
+
+    &>.tab:first-child {
+      margin-left: auto;
+    }
+
+    &>.tab:last-child {
+      margin-right: auto;
+    }
+
+
+    &::before {
+      display: none;
     }
   }
 
@@ -28,5 +67,4 @@
       background-color: #eeebe7;
     }
   }
-
 }

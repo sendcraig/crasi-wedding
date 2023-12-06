@@ -117,7 +117,9 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
             </Title>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
-                <SubHeading className={styles.date}>{date.date}</SubHeading>
+                <SubHeading className={styles.date} justify>
+                  {date.date}
+                </SubHeading>
                 {date.events.map((event) => (
                   <Stack
                     key={`${date.date}-event-${event.title}`}
