@@ -79,9 +79,13 @@ const Subtitle = ({
   return (
     <Group gap={16} pt={16}>
       <Text fw={350}>{title}</Text>
-      {['•', time, '•', trailing].map((text) => (
-        // eslint-disable-next-line react/jsx-key
-        <Text c={'#555555'} fs="italic" fw={320}>
+      {['•', time, '•', trailing].map((text, idx) => (
+        <Text
+          c={'#555555'}
+          fs="italic"
+          fw={320}
+          key={`subtitle-component-${idx}`}
+        >
           {text}
         </Text>
       ))}
