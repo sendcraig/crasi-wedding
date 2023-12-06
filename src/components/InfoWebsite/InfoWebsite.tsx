@@ -11,6 +11,7 @@ import { Itinerary } from '../sections/Itinerary';
 import cx from 'classnames';
 import { Travel } from '../sections/Travel';
 import { ImageSection } from '../sections/ImageSection';
+import { ThingsToDo } from '../sections/ThingsToDo';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -134,7 +135,7 @@ export const InfoWebsite = (): ReactNode => {
         <Itinerary scrollRef={itineraryScrollRef} />
         <Travel scrollRef={travelScrollRef} />
         <ImageSection />
-        <InfoSection title={'Things To Do'} scrollRef={thingsToDoScrollRef} />
+        <ThingsToDo scrollRef={thingsToDoScrollRef} />
         <InfoSection
           title={'Gifts & Registry'}
           scrollRef={giftsRegistryScrollRef}
