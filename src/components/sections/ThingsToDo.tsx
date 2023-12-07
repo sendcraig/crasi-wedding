@@ -30,14 +30,14 @@ const THINGS_TO_DO_SECTIONS = [
 
 const Section = ({ title, body }: { title: string; body: string }) => {
   return (
-    <Stack>
-      <Center>
-        <SubHeading>{title}</SubHeading>
-      </Center>
-      <Center>
-        <Body className={styles.section}>{body}</Body>
-      </Center>
-    </Stack>
+    <Center>
+      <Stack>
+        <SubHeading center>{title}</SubHeading>
+        <Body center className={styles.section}>
+          {body}
+        </Body>
+      </Stack>
+    </Center>
   );
 };
 
