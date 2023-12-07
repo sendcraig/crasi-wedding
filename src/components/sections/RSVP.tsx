@@ -11,7 +11,7 @@ export const RSVP = ({ scrollRef }: Props): ReactElement => {
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack>
-        <SectionTitle center>RSVP</SectionTitle>
+        <SectionTitle>RSVP</SectionTitle>
         <BodyInformational>
           Information on how to RSVP will be available soon.
         </BodyInformational>

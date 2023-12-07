@@ -4,18 +4,15 @@ import { useMediaQuery } from '@mantine/hooks';
 
 export const SectionTitle = ({
   className,
-  center = false,
   children,
 }: PropsWithChildren<{
   className?: string;
-  center?: boolean;
 }>): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
   return (
     <Title
       order={3}
       pb={32}
-      style={{ textAlign: isSmallWidth || center ? 'center' : 'inherit' }}
+      style={{ textAlign: 'center' }}
       className={className}
     >
       {children}
@@ -26,17 +23,26 @@ export const SectionTitle = ({
 export const SubHeading = ({
   className,
   justify = false,
+  center = false,
   children,
 }: PropsWithChildren<{
   className?: string;
   justify?: boolean;
+  center?: boolean;
 }>): ReactElement => {
   const isSmallWidth = useMediaQuery('(max-width: 767px)');
+
+  const textAlignment = () => {
+    if (center) return 'center';
+    if (justify) return 'justify';
+    return isSmallWidth ? 'center' : 'initial';
+  };
+
   return (
     <Text
       size={'lg'}
       pb={4}
-      style={{ textAlign: isSmallWidth && !justify ? 'center' : 'initial' }}
+      style={{ textAlign: textAlignment() }}
       className={className}
     >
       {children}
@@ -58,18 +64,23 @@ export const SubHeadingLight = ({
 export const Body = ({
   className,
   justify = false,
+  center = false,
   children,
 }: PropsWithChildren<{
   className?: string;
   justify?: boolean;
+  center?: boolean;
 }>): ReactElement => {
   const isSmallWidth = useMediaQuery('(max-width: 767px)');
+
+  const textAlignment = () => {
+    if (center) return 'center';
+    if (justify) return 'justify';
+    return isSmallWidth ? 'center' : 'initial';
+  };
+
   return (
-    <Text
-      fw={300}
-      style={{ textAlign: isSmallWidth && !justify ? 'center' : 'initial' }}
-      className={className}
-    >
+    <Text fw={300} style={{ textAlign: textAlignment() }} className={className}>
       {children}
     </Text>
   );

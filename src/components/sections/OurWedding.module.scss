@@ -1,26 +1,44 @@
 .sectionContainer {
   position: relative;
-  height: calc(60vh - 128px);
+  height: max(calc(60vh - 128px), 100%);
 }
 
-.text {
-  position: relative;
-  padding: 32px;
-  text-align: center;
+.image {
+  filter: grayscale(100%) brightness(120%) contrast(95%);
+  object-position: 50% 60%;
+}
+
+.frameContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rect1 {
   position: absolute;
-  top: -5%;
-  height: 110%;
-  width: 100%;
-  background-color: rgba(251, 249, 246, 0.65);
+  height: calc(100% - 16px);
+  width: calc(100% - 32px);
+  max-width: 404px;
+  background-color: rgba(251, 249, 246, 0.6);
+  box-shadow: -8px 0px 24px -4px rgba(0,0,0,0.2);
 }
 
 .rect2 {
   position: absolute;
-  left: -5%;
-  width: 110%;
-  height: 100%;
-  background-color: rgba(251, 249, 246, 0.65);
+  height: calc(100% - 32px);
+  width: calc(100% - 16px);
+  max-width: 420px;
+  background-color: rgba(251, 249, 246, 0.6);
+  box-shadow: 8px 0px 24px -4px rgba(0,0,0,0.2);
+}
+
+
+.textContainer {
+  position: relative;
+  padding: 32px;
+  max-width: 420px;
+  text-align: center;
 }

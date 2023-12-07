@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Center, Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import oliveGroveImage from '../../assets/images/olive-grove-2.png';
+import oliveGroveImage from '../../assets/images/olive-grove.webp';
 import styles from './OurWedding.module.scss';
 import { BodyStretch, SubHeadingLight } from '../typography/Typography';
 
@@ -11,15 +11,21 @@ type Props = {
 
 export const OurWedding = ({ scrollRef }: Props): ReactElement => {
   return (
-    <InfoSection scrollRef={scrollRef} backgroundImage={oliveGroveImage}>
+    <InfoSection
+      scrollRef={scrollRef}
+      backgroundImage={oliveGroveImage}
+      backgroundImageClassName={styles.image}
+    >
       <div className={styles.sectionContainer}>
-        <Center h={'100%'}>
-          <div className={styles.rect1} />
-          <div className={styles.rect2} />
+        <Center py={32}>
+          <div className={styles.frameContainer}>
+            <div className={styles.rect1} />
+            <div className={styles.rect2} />
+          </div>
           <Stack
             align={'center'}
             justify={'space-evenly'}
-            className={styles.text}
+            className={styles.textContainer}
           >
             <Title order={3}>Our Wedding</Title>
             <BodyStretch>is on the</BodyStretch>

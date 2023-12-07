@@ -3,7 +3,7 @@ import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SubHeading } from '../typography/Typography';
-import southAfricaImage from '../../assets/images/SA.jpg';
+import southAfricaImage from '../../assets/images/SA.webp';
 import styles from './Itinerary.module.scss';
 
 type ItineraryInfo = {

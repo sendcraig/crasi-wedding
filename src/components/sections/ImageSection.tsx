@@ -1,13 +1,32 @@
 import React, { ReactElement } from 'react';
-import { Image } from '@mantine/core';
-import festivalOfLightsImage from '../../assets/images/festival-of-lights.jpeg';
+import { Group, Image } from '@mantine/core';
+import nyeImage from '../../assets/images/NYE.webp';
+import creteImage from '../../assets/images/crete.webp';
 import styles from './ImageSection.module.scss';
+import cx from 'classnames';
 
-export const ImageSection = (): ReactElement => {
+export const ImageSection = ({
+  imageSrc,
+  imageClassName,
+  gradient = false,
+}: {
+  imageSrc: string;
+  imageClassName?: string;
+  gradient?: boolean;
+}): ReactElement => {
   return (
     <div style={{ position: 'relative' }}>
-      <Image src={festivalOfLightsImage} className={styles.image} />
-      <div className={styles.gradientOverlay} />
+      <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
+      {gradient && <div className={styles.gradientOverlay} />}
     </div>
+  );
+};
+
+export const DoubleImageSection = (): ReactElement => {
+  return (
+    <Group className={styles.doubleImageContainer} gap={0}>
+      <Image src={nyeImage} className={styles.nyeImage} />
+      <Image src={creteImage} className={styles.creteImage} />
+    </Group>
   );
 };

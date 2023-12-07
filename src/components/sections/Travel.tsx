@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Stack } from '@mantine/core';
+import { Center, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle, SubHeading } from '../typography/Typography';
-import { useMediaQuery } from '@mantine/hooks';
 
 const TRAVEL_SECTIONS = [
   {
@@ -24,19 +23,19 @@ type Props = {
 };
 
 export const Travel = ({ scrollRef }: Props): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
-
   return (
     <InfoSection scrollRef={scrollRef}>
-      <Stack px={isSmallWidth ? 0 : 64}>
-        <SectionTitle>Travel</SectionTitle>
-        {TRAVEL_SECTIONS.map((section, idx) => (
-          <Stack key={`travel-section-${idx}`} pb={24}>
-            <SubHeading>{section.title}</SubHeading>
-            <Body>{section.body}</Body>
-          </Stack>
-        ))}
-      </Stack>
+      <Center>
+        <Stack maw={1200}>
+          <SectionTitle>Travel</SectionTitle>
+          {TRAVEL_SECTIONS.map((section, idx) => (
+            <Stack key={`travel-section-${idx}`} pb={24}>
+              <SubHeading>{section.title}</SubHeading>
+              <Body>{section.body}</Body>
+            </Stack>
+          ))}
+        </Stack>
+      </Center>
     </InfoSection>
   );
 };

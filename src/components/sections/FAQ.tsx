@@ -11,7 +11,7 @@ export const FAQ = ({ scrollRef }: Props): ReactElement => {
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack>
-        <SectionTitle center>FAQs</SectionTitle>
+        <SectionTitle>FAQs</SectionTitle>
         <BodyInformational>
           Answers to all of your questions can be found here.
         </BodyInformational>
