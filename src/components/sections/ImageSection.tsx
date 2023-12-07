@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Image } from '@mantine/core';
-import festivalOfLightsImage from '../../assets/images/festival-of-lights.jpeg';
+import festivalOfLightsImage from '../../assets/images/festival-of-lights.webp';
 import styles from './ImageSection.module.scss';
 
 export const ImageSection = (): ReactElement => {
