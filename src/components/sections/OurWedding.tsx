@@ -11,7 +11,11 @@ type Props = {
 
 export const OurWedding = ({ scrollRef }: Props): ReactElement => {
   return (
-    <InfoSection scrollRef={scrollRef} backgroundImage={oliveGroveImage}>
+    <InfoSection
+      scrollRef={scrollRef}
+      backgroundImage={oliveGroveImage}
+      backgroundImageClassName={styles.image}
+    >
       <div className={styles.sectionContainer}>
         <Center py={32}>
           <div className={styles.frameContainer}>

@@ -9,11 +9,11 @@ export const HeroSection = (): ReactElement => {
         <Title
           size={144}
           ff={'Beautifully Delicious Bold'}
-          style={{ textAlign: 'center' }}
+          className={styles.textShadow}
         >
           Craig & Josephin
         </Title>
-        <Title order={5} ff={'Noto Serif'}>
+        <Title order={5} ff={'Noto Serif'} className={styles.textShadow}>
           are getting married.
         </Title>
       </Stack>

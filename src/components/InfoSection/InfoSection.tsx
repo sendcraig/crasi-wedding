@@ -9,6 +9,7 @@ type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
   noPadding?: boolean;
   backgroundImage?: string;
+  backgroundImageClassName?: string;
   backgroundColor?: string;
 };
 
@@ -17,6 +18,7 @@ export const InfoSection = ({
   scrollRef,
   noPadding,
   backgroundImage,
+  backgroundImageClassName,
   backgroundColor = '#FBF9F6',
   children,
 }: PropsWithChildren<Props>): ReactElement => {
@@ -29,7 +31,10 @@ export const InfoSection = ({
       style={{ backgroundColor: backgroundColor }}
     >
       {backgroundImage && (
-        <Image src={backgroundImage} className={styles.backgroundImage} />
+        <Image
+          src={backgroundImage}
+          className={cx(styles.backgroundImage, backgroundImageClassName)}
+        />
       )}
       {title && <SectionTitle>{title}</SectionTitle>}
       {children}

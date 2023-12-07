@@ -14,6 +14,8 @@ import { ThingsToDo } from '../sections/ThingsToDo';
 import { GiftsRegistry } from '../sections/GiftsRegistry';
 import { RSVP } from '../sections/RSVP';
 import { FAQ } from '../sections/FAQ';
+import festivalOfLightsImage from '../../assets/images/festival-of-lights.webp';
+import croatiaImage from '../../assets/images/croatia.webp';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -136,9 +138,13 @@ export const InfoWebsite = (): ReactNode => {
         <OurWedding scrollRef={ourWeddingScrollRef} />
         <Itinerary scrollRef={itineraryScrollRef} />
         <Travel scrollRef={travelScrollRef} />
-        <ImageSection />
+        <ImageSection imageSrc={festivalOfLightsImage} gradient />
         <ThingsToDo scrollRef={thingsToDoScrollRef} />
         <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
+        <ImageSection
+          imageSrc={croatiaImage}
+          imageClassName={styles.croatiaImage}
+        />
         <RSVP scrollRef={rsvpScrollRef} />
         <FAQ scrollRef={faqScrollRef} />
       </Stack>

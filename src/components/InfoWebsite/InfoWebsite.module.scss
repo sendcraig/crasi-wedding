@@ -67,4 +67,9 @@
       background-color: #eeebe7;
     }
   }
+
+  .croatiaImage {
+    object-position: 50% 65%;
+    filter: contrast(110%) grayscale(100%) brightness(115%);
+  }
 }

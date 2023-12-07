@@ -18,7 +18,7 @@
   object-fit: cover;
   object-position: 55% 50%;
   filter: grayscale(100%)  contrast(115%);
-  border-left: 2px solid rgba(0, 0, 0, 0.5);
-  border-right: 2px solid rgba(0, 0, 0, 0.5);
-  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
