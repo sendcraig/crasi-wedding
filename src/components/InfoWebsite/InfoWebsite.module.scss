@@ -70,6 +70,11 @@
 
   .croatiaImage {
     object-position: 50% 65%;
-    filter: contrast(110%) grayscale(100%) brightness(115%);
+    filter: contrast(110%) grayscale(100%) brightness(120%);
+  }
+
+  .festivalOfLightsImage {
+    object-position: 50% 75%;
+    filter: grayscale(100%) brightness(110%) contrast(110%);
   }
 }

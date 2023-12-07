@@ -9,7 +9,7 @@ import { OurWedding } from '../sections/OurWedding';
 import { Itinerary } from '../sections/Itinerary';
 import cx from 'classnames';
 import { Travel } from '../sections/Travel';
-import { ImageSection } from '../sections/ImageSection';
+import { DoubleImageSection, ImageSection } from '../sections/ImageSection';
 import { ThingsToDo } from '../sections/ThingsToDo';
 import { GiftsRegistry } from '../sections/GiftsRegistry';
 import { RSVP } from '../sections/RSVP';
@@ -138,14 +138,19 @@ export const InfoWebsite = (): ReactNode => {
         <OurWedding scrollRef={ourWeddingScrollRef} />
         <Itinerary scrollRef={itineraryScrollRef} />
         <Travel scrollRef={travelScrollRef} />
-        <ImageSection imageSrc={festivalOfLightsImage} gradient />
+        <ImageSection
+          imageSrc={festivalOfLightsImage}
+          imageClassName={styles.festivalOfLightsImage}
+          gradient
+        />
         <ThingsToDo scrollRef={thingsToDoScrollRef} />
+        <DoubleImageSection />
         <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
+        <RSVP scrollRef={rsvpScrollRef} />
         <ImageSection
           imageSrc={croatiaImage}
           imageClassName={styles.croatiaImage}
         />
-        <RSVP scrollRef={rsvpScrollRef} />
         <FAQ scrollRef={faqScrollRef} />
       </Stack>
     </MantineProvider>

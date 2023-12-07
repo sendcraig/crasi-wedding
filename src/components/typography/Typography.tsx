@@ -4,18 +4,15 @@ import { useMediaQuery } from '@mantine/hooks';
 
 export const SectionTitle = ({
   className,
-  center = false,
   children,
 }: PropsWithChildren<{
   className?: string;
-  center?: boolean;
 }>): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
   return (
     <Title
       order={3}
       pb={32}
-      style={{ textAlign: isSmallWidth || center ? 'center' : 'inherit' }}
+      style={{ textAlign: 'center' }}
       className={className}
     >
       {children}

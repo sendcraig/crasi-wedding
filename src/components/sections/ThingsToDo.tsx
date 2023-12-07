@@ -51,7 +51,7 @@ export const ThingsToDo = ({ scrollRef }: Props): ReactElement => {
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack px={isSmallWidth ? 0 : 64}>
-        <SectionTitle center>Things To Do</SectionTitle>
+        <SectionTitle>Things To Do</SectionTitle>
         <Grid grow gutter={72}>
           {THINGS_TO_DO_SECTIONS.map((section, idx) => (
             <Grid.Col

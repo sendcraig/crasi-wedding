@@ -17,7 +17,7 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
       </Center>
       <Center>
         <Stack gap={0} justify={'flex-end'} maw={1200}>
-          <SectionTitle center>Our Story</SectionTitle>
+          <SectionTitle>Our Story</SectionTitle>
           <Body>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             eget scelerisque felis, quis venenatis dolor. Cras laoreet nulla
