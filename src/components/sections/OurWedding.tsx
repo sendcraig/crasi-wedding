@@ -4,19 +4,27 @@ import { InfoSection } from '../InfoSection/InfoSection';
 import oliveGroveImage from '../../assets/images/olive-grove.webp';
 import styles from './OurWedding.module.scss';
 import { BodyStretch, SubHeadingLight } from '../typography/Typography';
+import { useMediaQuery } from '@mantine/hooks';
+import cx from 'classnames';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
 };
 
 export const OurWedding = ({ scrollRef }: Props): ReactElement => {
+  const isSmallWidth = useMediaQuery('(max-width: 500px)');
+
   return (
     <InfoSection
       scrollRef={scrollRef}
       backgroundImage={oliveGroveImage}
       backgroundImageClassName={styles.image}
     >
-      <div className={styles.sectionContainer}>
+      <div
+        className={cx(styles.sectionContainer, {
+          [styles.extraMargin]: isSmallWidth,
+        })}
+      >
         <Center py={32}>
           <div className={styles.frameContainer}>
             <div className={styles.rect1} />

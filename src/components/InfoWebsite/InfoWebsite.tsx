@@ -69,7 +69,10 @@ export const InfoWebsite = (): ReactNode => {
         <Tabs
           value={null}
           className={cx(styles.tabs, {
-            [styles.stuck]: !entry?.isIntersecting,
+            [styles.stuck]:
+              !entry?.isIntersecting &&
+              entry?.boundingClientRect.y &&
+              entry?.boundingClientRect.y < 0,
           })}
           allowTabDeactivation
           ref={tabIntsersectionRef}

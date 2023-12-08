@@ -3,6 +3,10 @@
   height: max(calc(60vh - 128px), 100%);
 }
 
+.extraMargin {
+  margin: 0 -32px;
+}
+
 .image {
   filter: grayscale(100%) brightness(120%) contrast(95%);
   object-position: 50% 60%;
