@@ -31,3 +31,17 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding: 0;
   cursor: default;
 }
+
+a {
+  color: #909296 !important;
+  text-decoration: underline 2px rgb(200, 204, 195) !important;
+  text-underline-offset: 4px !important;
+  transition: text-decoration-color 400ms, text-underline-offset 300ms ease-in-out, color 300ms ease-in-out;
+;
+}
+
+a:hover {
+  color: rgb(95, 114, 87) !important;
+  text-decoration-color: rgb(140, 150, 124) !important;
+  text-underline-offset: 6px !important;
+}

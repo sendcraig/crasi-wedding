@@ -1,80 +1,78 @@
-:local {
-  .container {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  background-color: #FBF9F6;
+  top: -1px; // trick intersection observer to thinking we're off screen
+  position: sticky;
+  z-index: 1;
+  overflow: scroll;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  &.stuck {
+    box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.2);
   }
 
-  .tabs {
-    background-color: #FBF9F6;
-    top: -1px; // trick intersection observer to thinking we're off screen
-    position: sticky;
-    z-index: 1;
-    overflow: scroll;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  //&.leftShadow {
+  //  box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
+  //
+  //  &.rightShadow {
+  //    box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6), inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
+  //  }
+  //}
+  //
+  //&.rightShadow {
+  //  box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
+  //
+  //  &.leftShadow {
+  //    box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6), inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
+  //  }
+  //}
+}
 
-    &.stuck {
-      box-shadow: 0 8px 24px -10px rgba(0,0,0,0.2);
-    }
+.tabList {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: fit-content;
+  min-width: 100%;
 
-    //&.leftShadow {
-    //  box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
-    //
-    //  &.rightShadow {
-    //    box-shadow: inset 20px 0 20px -20px rgba(0, 0, 0, 0.6), inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
-    //  }
-    //}
-    //
-    //&.rightShadow {
-    //  box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6);
-    //
-    //  &.leftShadow {
-    //    box-shadow: inset -20px 0 20px -20px rgba(0, 0, 0, 0.6), inset 20px 0 20px -20px rgba(0, 0, 0, 0.6);
-    //  }
-    //}
+  & > .tab:first-child {
+    margin-left: auto;
   }
 
-  .tabList {
-    display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: scroll;
-    width: fit-content;
-    min-width: 100%;
-
-    &>.tab:first-child {
-      margin-left: auto;
-    }
-
-    &>.tab:last-child {
-      margin-right: auto;
-    }
-
-
-    &::before {
-      display: none;
-    }
+  & > .tab:last-child {
+    margin-right: auto;
   }
 
-  .tab {
-    border-radius: 0;
-    font-weight: 375;
-    height: 65px;
-    transition: background-color 0.2s ease-in-out;
 
-    &:hover {
-      background-color: #eeebe7;
-    }
+  &::before {
+    display: none;
   }
+}
 
-  .croatiaImage {
-    object-position: 50% 65%;
-    filter: contrast(110%) grayscale(100%) brightness(120%);
-  }
+.tab {
+  border-radius: 0;
+  font-weight: 375;
+  height: 65px;
+  transition: background-color 0.2s ease-in-out;
 
-  .festivalOfLightsImage {
-    object-position: 50% 75%;
-    filter: grayscale(100%) brightness(110%) contrast(110%);
+  &:hover {
+    background-color: #eeebe7;
   }
+}
+
+.croatiaImage {
+  object-position: 50% 65%;
+  filter: contrast(110%) grayscale(100%) brightness(120%);
+}
+
+.festivalOfLightsImage {
+  object-position: 50% 75%;
+  filter: grayscale(100%) brightness(110%) contrast(110%);
 }
