@@ -19,13 +19,6 @@ export const GiftsRegistry = ({ scrollRef }: Props): ReactElement => {
             will travel huge distances to be there to support us, and those
             journeys and the time spent together are the only wedding gifts that
             we are asking for.
-            <br />
-            <br />
-            However, if you&apos;re truly determined and won&apos;t take no for
-            an answer, <i style={{ fontSize: 20 }}>cocaine</i> and{' '}
-            <i style={{ fontSize: 20 }}>ketamine</i> are things we always
-            cherish and appreciate. Any amount is welcome, but again,
-            there&apos;s no obligation.
           </Body>
         </Stack>
       </Center>
