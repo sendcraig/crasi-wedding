@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Center, Image, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import summertimeImage from '../../assets/images/summertime.webp';
+import summertimeImage from '../../assets/images/balcony.jpg';
 import { Body, SectionTitle } from '../typography/Typography';
 import styles from './OurStory.module.scss';
 

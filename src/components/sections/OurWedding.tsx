@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Center, Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import oliveGroveImage from '../../assets/images/olive-grove.webp';
+import oliveGroveImage from '../../assets/images/oliveGrove.jpg';
 import styles from './OurWedding.module.scss';
 import { BodyStretch, SubHeadingLight } from '../typography/Typography';
 import { useMediaQuery } from '@mantine/hooks';

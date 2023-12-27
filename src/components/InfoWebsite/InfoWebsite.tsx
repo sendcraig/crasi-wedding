@@ -14,8 +14,8 @@ import { ThingsToDo } from '../sections/ThingsToDo';
 import { GiftsRegistry } from '../sections/GiftsRegistry';
 import { RSVP } from '../sections/RSVP';
 import { FAQ } from '../sections/FAQ';
-import festivalOfLightsImage from '../../assets/images/festival-of-lights.webp';
-import croatiaImage from '../../assets/images/croatia.webp';
+import festivalOfLightsImage from '../../assets/images/festivalOfLights.jpg';
+import croatiaImage from '../../assets/images/croatia.jpg';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',

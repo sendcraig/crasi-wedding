@@ -3,7 +3,7 @@ import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SubHeading } from '../typography/Typography';
-import southAfricaImage from '../../assets/images/SA.webp';
+import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
 
 type ItineraryInfo = {
@@ -109,7 +109,7 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
           span={{ xs: 12, sm: 9, lg: 8 }}
           py={0}
           pl={isSmallWidth ? 40 : 64}
-          pr={32}
+          pr={isSmallWidth ? 48 : 96}
         >
           <Stack py={64} gap={32}>
             <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
