@@ -144,7 +144,6 @@ export const InfoWebsite = (): ReactNode => {
         <ImageSection
           imageSrc={festivalOfLightsImage}
           imageClassName={styles.festivalOfLightsImage}
-          gradient
         />
         <ThingsToDo scrollRef={thingsToDoScrollRef} />
         <DoubleImageSection />

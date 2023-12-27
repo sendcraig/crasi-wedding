@@ -8,16 +8,13 @@ import cx from 'classnames';
 export const ImageSection = ({
   imageSrc,
   imageClassName,
-  gradient = false,
 }: {
   imageSrc: string;
   imageClassName?: string;
-  gradient?: boolean;
 }): ReactElement => {
   return (
     <div style={{ position: 'relative' }}>
       <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
-      {gradient && <div className={styles.gradientOverlay} />}
     </div>
   );
 };
