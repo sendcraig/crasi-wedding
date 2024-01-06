@@ -1,4 +1,6 @@
 .date {
+  white-space: nowrap;
+
   &::before {
     content: '\2724';
     color: rgba(0,0,0,0.4);

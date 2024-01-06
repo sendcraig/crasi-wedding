@@ -88,7 +88,7 @@ export const FAQ = ({ scrollRef }: Props): ReactElement => {
                     </Text>
                   </AccordionControl>
                   <AccordionPanel>
-                    <Body>
+                    <Body justify>
                       <div
                         dangerouslySetInnerHTML={{ __html: section.answer }}
                       />
