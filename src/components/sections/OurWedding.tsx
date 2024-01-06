@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const OurWedding = ({ scrollRef }: Props): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 500px)');
+  const isXSmallWidth = useMediaQuery('(max-width: 500px)');
 
   return (
     <InfoSection
@@ -22,7 +22,7 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
     >
       <div
         className={cx(styles.sectionContainer, {
-          [styles.extraMargin]: isSmallWidth,
+          [styles.extraMargin]: isXSmallWidth,
         })}
       >
         <Center py={32}>

@@ -8,7 +8,7 @@ import { useMediaQuery } from '@mantine/hooks';
 const THINGS_TO_DO_SECTIONS = [
   {
     title: 'Beaches & Nature',
-    body: 'Crete is famous for its nature, and for its beaches in particular. The west side of the island is home to many fantastic beaches, the best and most famous of which are Balos and Elafonissi, but Falasarna, Marathi, and Agia Marina beaches are also popular.<br/><br/>For the more adventurous, there is hiking in the southern and more mountainous parts of the island. The Kourtaliotiko Gorge in particular is known to be one of the most beautiful natural areas of the entire island, and is a little more than an hour drive from Chania.',
+    body: 'Crete is famous for its nature, and for its beaches in particular. The west side of the island is home to many fantastic beaches, the best and most famous of which are Balos and Elafonissi, but Falasarna, Marathi, and Loutraki beaches are also popular.<br/><br/>For the more adventurous, there is hiking in the southern and more mountainous parts of the island. The Kourtaliotiko Gorge in particular is known to be one of the most beautiful natural areas of the entire island, and is a little more than an hour drive from Chania.',
   },
   {
     title: 'City & Culture',
@@ -45,16 +45,18 @@ type Props = {
 
 export const ThingsToDo = ({ scrollRef }: Props): ReactElement => {
   const isSmallWidth = useMediaQuery('(max-width: 767px)');
+  const isXSmallWidth = useMediaQuery('(max-width: 500px)');
 
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack px={isSmallWidth ? 0 : 64}>
         <SectionTitle>Things To Do</SectionTitle>
-        <Grid grow gutter={72}>
+        <Grid grow gutter={isXSmallWidth ? 0 : 72}>
           {THINGS_TO_DO_SECTIONS.map((section, idx) => (
             <Grid.Col
               span={{ xs: 12, sm: 6, md: 4 }}
               key={`things-to-do-section-${idx}`}
+              pb={0}
             >
               <Section title={section.title} body={section.body} />
             </Grid.Col>

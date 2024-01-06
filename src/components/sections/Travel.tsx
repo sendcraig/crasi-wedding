@@ -29,7 +29,10 @@ export const Travel = ({ scrollRef }: Props): ReactElement => {
         <Stack maw={1200}>
           <SectionTitle>Travel</SectionTitle>
           {TRAVEL_SECTIONS.map((section, idx) => (
-            <Stack key={`travel-section-${idx}`} pb={24}>
+            <Stack
+              key={`travel-section-${idx}`}
+              pb={idx === TRAVEL_SECTIONS.length - 1 ? 0 : 24}
+            >
               <SubHeading>{section.title}</SubHeading>
               <TypographyStylesProvider p={0}>
                 <Body>
