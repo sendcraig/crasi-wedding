@@ -11,8 +11,8 @@ import {
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle } from '../typography/Typography';
 import styles from './FAQ.module.scss';
-import { useMediaQuery } from '@mantine/hooks';
 import cx from 'classnames';
+import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
@@ -62,7 +62,7 @@ const FAQ_SECTIONS = [
 ];
 
 export const FAQ = ({ scrollRef }: Props): ReactElement => {
-  const isXSmallWidth = useMediaQuery('(max-width: 500px)');
+  const { isXSmallWidth } = useDeviceWidth();
 
   return (
     <InfoSection scrollRef={scrollRef}>

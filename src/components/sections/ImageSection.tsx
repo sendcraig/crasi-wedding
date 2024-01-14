@@ -4,6 +4,7 @@ import nyeImage from '../../assets/images/NYE.jpg';
 import creteImage from '../../assets/images/crete.jpg';
 import styles from './ImageSection.module.scss';
 import cx from 'classnames';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 export const ImageSection = ({
   imageSrc,
@@ -14,7 +15,11 @@ export const ImageSection = ({
 }): ReactElement => {
   return (
     <div style={{ position: 'relative' }}>
-      <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
+      <ParallaxBanner style={{ aspectRatio: 2.5 }}>
+        <ParallaxBannerLayer speed={-5}>
+          <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
+        </ParallaxBannerLayer>
+      </ParallaxBanner>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Center, Grid, Stack, TypographyStylesProvider } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle, SubHeading } from '../typography/Typography';
 import styles from './ThingsToDo.module.scss';
-import { useMediaQuery } from '@mantine/hooks';
+import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 
 const THINGS_TO_DO_SECTIONS = [
   {
@@ -12,7 +12,7 @@ const THINGS_TO_DO_SECTIONS = [
   },
   {
     title: 'City & Culture',
-    body: 'Chania is the biggest city in Crete, and has a beautiful Old Town and historic center. The large harbor in the city center is surrounded with restaurants, cafés, and shops as well as many historic sights. There are walking tours for those interested in learning more about the city.<br/><br/>The towns and villages near Chania are also full of charm, such as Kalyves, Almyrida, Vamos, and Gavalochori to the east, and Kissamos, Elos, and Kaliviani to the west.',
+    body: 'Chania is second-largest city in Crete, and has a beautiful Old Town and historic center. The large harbor in the city center is surrounded with restaurants, cafés, and shops as well as many historic sights. There are walking tours for those interested in learning more about the city.<br/><br/>The towns and villages near Chania are also full of charm, such as Kalyves, Almyrida, Vamos, and Gavalochori to the east, and Kissamos, Elos, and Kaliviani to the west.',
   },
   {
     title: 'Eat & Drink',
@@ -44,8 +44,7 @@ type Props = {
 };
 
 export const ThingsToDo = ({ scrollRef }: Props): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
-  const isXSmallWidth = useMediaQuery('(max-width: 500px)');
+  const { isXSmallWidth, isSmallWidth } = useDeviceWidth();
 
   return (
     <InfoSection scrollRef={scrollRef}>

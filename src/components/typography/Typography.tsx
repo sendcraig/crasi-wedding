@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
 import { Text, Title } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 
 export const SectionTitle = ({
   className,
@@ -30,7 +30,7 @@ export const SubHeading = ({
   justify?: boolean;
   center?: boolean;
 }>): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
+  const { isSmallWidth } = useDeviceWidth();
 
   const textAlignment = () => {
     if (center) return 'center';
@@ -71,7 +71,7 @@ export const Body = ({
   justify?: boolean;
   center?: boolean;
 }>): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
+  const { isSmallWidth } = useDeviceWidth();
 
   const textAlignment = () => {
     if (center) return 'center';

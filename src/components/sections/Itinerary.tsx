@@ -1,10 +1,20 @@
-import React, { ReactElement } from 'react';
+import React, {
+  ReactElement,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SubHeading } from '../typography/Typography';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import cx from 'classnames';
+import { useParallaxAspectRation } from '../../hooks/useParallaxAspectRatio';
+import { useDeviceWidth } from '../../hooks/useDeviceWidth';
+import { useWindowEvent } from '@mantine/hooks';
 
 type ItineraryInfo = {
   date: string;
@@ -100,7 +110,25 @@ type Props = {
 };
 
 export const Itinerary = ({ scrollRef }: Props): ReactElement => {
-  const isSmallWidth = useMediaQuery('(max-width: 767px)');
+  const { isSmallWidth } = useDeviceWidth();
+  const { imageRef, aspectRatio } = useParallaxAspectRation();
+  const [maxImageHeight, setMaxImageHeight] = useState(0);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  const handleResize = useCallback(() => {
+    if (textRef.current) {
+      console.log('textarea height', textRef.current.getBoundingClientRect());
+      setMaxImageHeight(textRef.current.getBoundingClientRect().height * 1.1);
+    }
+  }, [textRef]);
+
+  useWindowEvent('resize', handleResize);
+
+  useEffect(() => {
+    if (textRef.current) {
+      handleResize();
+    }
+  }, [handleResize, textRef]);
 
   return (
     <InfoSection scrollRef={scrollRef} noPadding>
@@ -111,7 +139,7 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
           pl={isSmallWidth ? 40 : 64}
           pr={isSmallWidth ? 48 : 96}
         >
-          <Stack py={64} gap={32}>
+          <Stack py={64} gap={32} ref={textRef}>
             <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
               Itinerary
             </Title>
@@ -138,11 +166,26 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
             ))}
           </Stack>
         </Grid.Col>
-        <Grid.Col span={{ xs: 0, sm: 3 }} py={0}>
-          <Image src={southAfricaImage} className={styles.sidebarImage} />
+        <Grid.Col span={{ xs: 0, sm: 3 }} py={0} ref={imageRef}>
+          <ParallaxBanner
+            style={{
+              aspectRatio: isSmallWidth ? '1.15/1' : aspectRatio,
+              height: '100%',
+              maxHeight: maxImageHeight,
+            }}
+          >
+            <ParallaxBannerLayer speed={isSmallWidth ? -6 : -12}>
+              <Image
+                src={southAfricaImage}
+                className={cx(styles.sidebarImage, {
+                  [styles.smallWidth]: isSmallWidth,
+                })}
+              />
+            </ParallaxBannerLayer>
+          </ParallaxBanner>
         </Grid.Col>
         <Grid.Col span={{ lg: 1 }} py={0}>
-          <Flex h={'100%'} />
+          <Flex />
         </Grid.Col>
       </Grid>
     </InfoSection>

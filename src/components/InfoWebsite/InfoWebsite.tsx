@@ -16,6 +16,7 @@ import { RSVP } from '../sections/RSVP';
 import { FAQ } from '../sections/FAQ';
 import festivalOfLightsImage from '../../assets/images/festivalOfLights.jpg';
 import croatiaImage from '../../assets/images/croatia.jpg';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -64,97 +65,99 @@ export const InfoWebsite = (): ReactNode => {
 
   return (
     <MantineProvider theme={theme}>
-      <Stack gap={0}>
-        <HeroSection />
-        <Tabs
-          value={null}
-          className={cx(styles.tabs, {
-            [styles.stuck]:
-              !entry?.isIntersecting &&
-              entry?.boundingClientRect.y &&
-              entry?.boundingClientRect.y < 0,
-          })}
-          allowTabDeactivation
-          ref={tabIntsersectionRef}
-        >
-          <Tabs.List className={styles.tabList}>
-            <Tabs.Tab
-              value={'our-story'}
-              onClick={() => ourStoryScroll()}
-              className={styles.tab}
-            >
-              Our Story
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'wedding-details'}
-              onClick={() => ourWeddingScroll()}
-              className={styles.tab}
-            >
-              Our Wedding
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'itinerary'}
-              onClick={() => itineraryScroll()}
-              className={styles.tab}
-            >
-              Itinerary
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'travel'}
-              onClick={() => travelScroll()}
-              className={styles.tab}
-            >
-              Travel
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'things-to-do'}
-              onClick={() => thingsToDoScroll()}
-              className={styles.tab}
-            >
-              Things To Do
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'gifts-registry'}
-              onClick={() => giftsRegistryScroll()}
-              className={styles.tab}
-            >
-              Gifts & Registry
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'rsvp'}
-              onClick={() => rsvpScroll()}
-              className={styles.tab}
-            >
-              RSVP
-            </Tabs.Tab>
-            <Tabs.Tab
-              value={'faq'}
-              onClick={() => faqScroll()}
-              className={styles.tab}
-            >
-              FAQ
-            </Tabs.Tab>
-          </Tabs.List>
-        </Tabs>
+      <ParallaxProvider>
+        <Stack gap={0}>
+          <HeroSection />
+          <Tabs
+            value={null}
+            className={cx(styles.tabs, {
+              [styles.stuck]:
+                !entry?.isIntersecting &&
+                entry?.boundingClientRect.y &&
+                entry?.boundingClientRect.y < 0,
+            })}
+            allowTabDeactivation
+            ref={tabIntsersectionRef}
+          >
+            <Tabs.List className={styles.tabList}>
+              <Tabs.Tab
+                value={'our-story'}
+                onClick={() => ourStoryScroll()}
+                className={styles.tab}
+              >
+                Our Story
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'wedding-details'}
+                onClick={() => ourWeddingScroll()}
+                className={styles.tab}
+              >
+                Our Wedding
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'itinerary'}
+                onClick={() => itineraryScroll()}
+                className={styles.tab}
+              >
+                Itinerary
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'travel'}
+                onClick={() => travelScroll()}
+                className={styles.tab}
+              >
+                Travel
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'things-to-do'}
+                onClick={() => thingsToDoScroll()}
+                className={styles.tab}
+              >
+                Things To Do
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'gifts-registry'}
+                onClick={() => giftsRegistryScroll()}
+                className={styles.tab}
+              >
+                Gifts & Registry
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'rsvp'}
+                onClick={() => rsvpScroll()}
+                className={styles.tab}
+              >
+                RSVP
+              </Tabs.Tab>
+              <Tabs.Tab
+                value={'faq'}
+                onClick={() => faqScroll()}
+                className={styles.tab}
+              >
+                FAQ
+              </Tabs.Tab>
+            </Tabs.List>
+          </Tabs>
 
-        <OurStory scrollRef={ourStoryScrollRef} />
-        <OurWedding scrollRef={ourWeddingScrollRef} />
-        <Itinerary scrollRef={itineraryScrollRef} />
-        <Travel scrollRef={travelScrollRef} />
-        <ImageSection
-          imageSrc={festivalOfLightsImage}
-          imageClassName={styles.festivalOfLightsImage}
-        />
-        <ThingsToDo scrollRef={thingsToDoScrollRef} />
-        <DoubleImageSection />
-        <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
-        <RSVP scrollRef={rsvpScrollRef} />
-        <ImageSection
-          imageSrc={croatiaImage}
-          imageClassName={styles.croatiaImage}
-        />
-        <FAQ scrollRef={faqScrollRef} />
-      </Stack>
+          <OurStory scrollRef={ourStoryScrollRef} />
+          <OurWedding scrollRef={ourWeddingScrollRef} />
+          <Itinerary scrollRef={itineraryScrollRef} />
+          <Travel scrollRef={travelScrollRef} />
+          <ImageSection
+            imageSrc={festivalOfLightsImage}
+            imageClassName={styles.festivalOfLightsImage}
+          />
+          <ThingsToDo scrollRef={thingsToDoScrollRef} />
+          <DoubleImageSection />
+          <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
+          <RSVP scrollRef={rsvpScrollRef} />
+          <ImageSection
+            imageSrc={croatiaImage}
+            imageClassName={styles.croatiaImage}
+          />
+          <FAQ scrollRef={faqScrollRef} />
+        </Stack>
+      </ParallaxProvider>
     </MantineProvider>
   );
 };
