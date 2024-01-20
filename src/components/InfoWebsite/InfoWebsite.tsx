@@ -140,6 +140,7 @@ export const InfoWebsite = (): ReactNode => {
           </Tabs>
 
           <div className={styles.wrapper}>
+            <div className={styles.gradientBackground} />
             <div className={styles.contentContainer}>
               <OurStory scrollRef={ourStoryScrollRef} />
               <OurWedding scrollRef={ourWeddingScrollRef} />

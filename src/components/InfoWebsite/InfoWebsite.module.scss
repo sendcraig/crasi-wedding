@@ -3,13 +3,14 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .tabs {
   background-color: #FBF9F6;
   top: -1px; // trick intersection observer to thinking we're off screen
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   overflow: scroll;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
@@ -67,16 +68,42 @@
   }
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .wrapper {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e0e0da;
 }
 
+
+.gradientBackground {
+  position: sticky;
+  top: 0;
+  animation: gradient-animation 20s ease infinite;
+  background: linear-gradient(300deg, #eceeea, #fbf9f6, #ebeee7) fixed;
+  background-size: 150% 150%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+
+}
 .contentContainer {
   max-width: 1800px;
+  margin-top: -100vh;
+  z-index: 1;
+  box-shadow: 1px 4px 20px -8px rgba(0,0,0,0.1);
 }
 
 .croatiaImage {
