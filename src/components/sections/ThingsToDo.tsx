@@ -16,7 +16,7 @@ const THINGS_TO_DO_SECTIONS = [
   },
   {
     title: 'Eat & Drink',
-    body: 'There is an endless amount of delicious food in Crete, with Greek cuisine obviously being the star of the show. There are many good restaurants in the city center near the harbor, but also quite a few hidden gems in the less touristy areas. We also recommend travelling to nearby villages to visit an authentic taverna in the countryside and enjoy some Raki with your meal and the famous Cretan hospitality. We\'ve started compiling a list of some of our favorites near Chania that we\'ve either visited or been recommended, <a href="https://maps.app.goo.gl/nwdFhfzkBoDAfDKa7" target="_blank">you can find it here.</a>',
+    body: 'There is an endless amount of delicious food in Crete, with Greek cuisine obviously being the star of the show. There are many good restaurants in the city center near the harbor, but also quite a few hidden gems in the less touristy areas. We also recommend travelling to nearby villages to visit an authentic taverna in the countryside and enjoy some Raki with your meal and the famous Cretan hospitality. We\'ve started compiling a list of some of our favorites near Chania that we\'ve either visited or been recommended, <a href="https://maps.app.goo.gl/nwdFhfzkBoDAfDKa7" target="_blank" style={{ }}>you can find it here.</a>',
   },
 ];
 
