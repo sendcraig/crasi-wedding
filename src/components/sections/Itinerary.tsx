@@ -20,7 +20,6 @@ type ItineraryInfo = {
   date: string;
   events: {
     title: string;
-    time: string;
     trailing: string;
     details: string;
   }[];
@@ -32,10 +31,9 @@ const ITINERARY_INFO: ItineraryInfo = [
     events: [
       {
         title: 'Evening Social',
-        time: '5-7pm',
         trailing: 'Location TBD',
         details:
-          'For those who have already arrived in Chania, we will be organizing a small meet & greet at a local venue, with beverages and small bites. Attendance is entirely optional and vibes are casual. Come as you are!',
+          "For those who have already arrived in Chania, we'd love to grab a drink with you at a local bar. Attendance is entirely optional and vibes are casual. Come as you are!",
       },
     ],
   },
@@ -44,10 +42,9 @@ const ITINERARY_INFO: ItineraryInfo = [
     events: [
       {
         title: 'Family Brunch',
-        time: '1-4pm',
         trailing: 'Family members only',
         details:
-          'For friends, Saturday is free to explore Chania and the beautiful surrounding area. For the families, we will host a light brunch in the villa where we will be staying. More information to follow.',
+          'For friends, Saturday is free to explore Chania and the beautiful surrounding area. For the families, we will host a light brunch in the villa where we will be staying.',
       },
     ],
   },
@@ -56,21 +53,18 @@ const ITINERARY_INFO: ItineraryInfo = [
     events: [
       {
         title: 'Ceremony',
-        time: '4:20pm',
         trailing: 'Cambos Estate',
         details:
-          'The ceremony will be held in a romantic olive grove on a farm southeast of Chania. Transportation will be available to shuttle to and from the venue.',
+          'The ceremony will be held in a romantic olive grove on a farm southeast of Chania. Transportation will be available to shuttle guests to and from the venue.',
       },
       {
         title: 'Cocktail Hour',
-        time: '5pm',
         trailing: 'Cyprus Trees',
         details:
           'Immediately following the ceremony, a cocktail hour will be held in the Cyprus trees near the venue’s entrance. The bride & groom will take several million photos at this time.',
       },
       {
         title: 'Dinner & Reception',
-        time: '6pm',
         trailing: 'Main Lawn',
         details:
           'The dinner and reception will be held on the main lawn at Cambos Estate. Speeches, music, dancing, and other wedding shenanigans will take place under the setting sun and continue into the night.',
@@ -81,17 +75,15 @@ const ITINERARY_INFO: ItineraryInfo = [
 
 const EventDetails = ({
   title,
-  time,
   trailing,
 }: {
   title: string;
-  time: string;
   trailing: string;
 }): ReactElement => {
   return (
     <Group gap={12} pt={16}>
       <Text fw={350}>{title}</Text>
-      {['•', time, '•', trailing].map((text, idx) => (
+      {['•', trailing].map((text, idx) => (
         <Text
           c={'#555555'}
           fs="italic"
@@ -117,7 +109,6 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
 
   const handleResize = useCallback(() => {
     if (textRef.current) {
-      console.log('textarea height', textRef.current.getBoundingClientRect());
       setMaxImageHeight(textRef.current.getBoundingClientRect().height * 1.1);
     }
   }, [textRef]);
@@ -156,7 +147,6 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
                   >
                     <EventDetails
                       title={event.title}
-                      time={event.time}
                       trailing={event.trailing}
                     />
                     <Body justify>{event.details}</Body>

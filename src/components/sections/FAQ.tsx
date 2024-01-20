@@ -22,7 +22,7 @@ const FAQ_SECTIONS = [
   {
     question: 'What should I wear to the wedding?',
     answer:
-      'We are recommending guests wear neutral or natural colors rather than bright flashy ones, to match the natural aesthetic of the olive grove and Cretan landscape. For the ladies, heels are welcome but stilettos are not recommended as the ceremony will take place in the middle of an olive grove without paved surfaces.',
+      'We are recommending guests wear neutral or natural colors rather than bright flashy ones, to match the natural aesthetic of the olive grove and Cretan landscape (this means that white/cream/beige is also allowed). For the ladies, heels are of course welcome but stilettos are not recommended as the ceremony will take place in the middle of an olive grove without paved surfaces.',
   },
   {
     question: 'Are kids and babies welcome at the wedding?',

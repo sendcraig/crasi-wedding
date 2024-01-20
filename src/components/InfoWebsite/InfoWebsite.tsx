@@ -139,24 +139,26 @@ export const InfoWebsite = (): ReactNode => {
             </Tabs.List>
           </Tabs>
 
-          <div>
-            <OurStory scrollRef={ourStoryScrollRef} />
-            <OurWedding scrollRef={ourWeddingScrollRef} />
-            <Itinerary scrollRef={itineraryScrollRef} />
-            <Travel scrollRef={travelScrollRef} />
-            <ImageSection
-              imageSrc={festivalOfLightsImage}
-              imageClassName={styles.festivalOfLightsImage}
-            />
-            <ThingsToDo scrollRef={thingsToDoScrollRef} />
-            <DoubleImageSection />
-            <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
-            <RSVP scrollRef={rsvpScrollRef} />
-            <ImageSection
-              imageSrc={croatiaImage}
-              imageClassName={styles.croatiaImage}
-            />
-            <FAQ scrollRef={faqScrollRef} />
+          <div className={styles.wrapper}>
+            <div className={styles.contentContainer}>
+              <OurStory scrollRef={ourStoryScrollRef} />
+              <OurWedding scrollRef={ourWeddingScrollRef} />
+              <Itinerary scrollRef={itineraryScrollRef} />
+              <Travel scrollRef={travelScrollRef} />
+              <ImageSection
+                imageSrc={festivalOfLightsImage}
+                imageClassName={styles.festivalOfLightsImage}
+              />
+              <ThingsToDo scrollRef={thingsToDoScrollRef} />
+              <DoubleImageSection />
+              <GiftsRegistry scrollRef={giftsRegistryScrollRef} />
+              <RSVP scrollRef={rsvpScrollRef} />
+              <ImageSection
+                imageSrc={croatiaImage}
+                imageClassName={styles.croatiaImage}
+              />
+              <FAQ scrollRef={faqScrollRef} />
+            </div>
           </div>
         </Stack>
       </ParallaxProvider>

@@ -18,10 +18,6 @@ const THINGS_TO_DO_SECTIONS = [
     title: 'Eat & Drink',
     body: 'There is an endless amount of delicious food in Crete, with Greek cuisine obviously being the star of the show. There are many good restaurants in the city center near the harbor, but also quite a few hidden gems in the less touristy areas. We also recommend travelling to nearby villages to visit an authentic taverna in the countryside and enjoy some Raki with your meal and the famous Cretan hospitality. We\'ve started compiling a list of some of our favorites near Chania that we\'ve either visited or been recommended, <a href="https://maps.app.goo.gl/nwdFhfzkBoDAfDKa7" target="_blank">you can find it here.</a>',
   },
-  {
-    title: 'Arts & History',
-    body: "Greece in general is rich with history, and Crete is no exception. There are numerous ruins and landmarks, mostly concentrated in the eastern part of the island. There are numerous museums in Chania where one can learn more about the ancient and more modern history of the area.<br/><br/>On the history topic, if you're stopping in Athens on the way to Crete visiting the Acropolis is a must. Its hilltop location also offers 360° panoramic views of the city.",
-  },
 ];
 
 const Section = ({ title, body }: { title: string; body: string }) => {

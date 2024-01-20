@@ -10,7 +10,7 @@ const TRAVEL_SECTIONS = [
   },
   {
     title: 'Getting around',
-    body: 'To get around Crete it is advised to rent a car, although there are also taxi services available. In Athens the best way to get around is either with the metro or Uber, but renting a car is impractical.<br/><br/>For the wedding ceremony, there will be shuttles to transport guests from their accommodation to the venue and back. There are many car rental companies with competitive rates in Crete, and the local small businesses tend to be quite friendly and reliable. Using a travel site like Kayak, Booking.com, or Expedia is probably the easiest way to search, but a classic Google also will also yield many results.',
+    body: 'To get around Crete it is advised to rent a car, although there are also taxi services available. In Athens the best way to get around is either with the metro or Uber, but renting a car is impractical. Note that there is no Uber on Crete, but plenty of taxi services available.<br/><br/>For the wedding ceremony, there will be shuttles to transport guests from their accommodation to the venue and back. There are many car rental companies with competitive rates in Crete, and the local small businesses tend to be quite friendly and reliable. Using a travel site like Kayak, Booking.com, or Expedia is probably the easiest way to search, but a classic Google also will also yield many results.',
   },
   {
     title: 'Where to stay',
