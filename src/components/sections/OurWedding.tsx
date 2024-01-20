@@ -3,9 +3,13 @@ import { Center, Stack, Title } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import oliveGroveImage from '../../assets/images/oliveGrove.jpg';
 import styles from './OurWedding.module.scss';
+import boldStyles from '../SaveTheDate/SaveTheDate.module.scss';
 import { BodyStretch, SubHeadingLight } from '../typography/Typography';
 import cx from 'classnames';
 import { useDeviceWidth } from '../../hooks/useDeviceWidth';
+import { Link } from '../Link/Link';
+import { hasTouchSupport } from '../utils';
+import { CalendarLink } from '../Link/CalendarLink';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
@@ -37,9 +41,20 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
           >
             <Title order={3}>Our Wedding</Title>
             <BodyStretch>is on the</BodyStretch>
-            <SubHeadingLight>29th of September, 2024</SubHeadingLight>
+            <SubHeadingLight
+              className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}
+            >
+              <CalendarLink text={'29th of September, 2024'} />
+            </SubHeadingLight>
             <BodyStretch>at</BodyStretch>
-            <SubHeadingLight>Cambos Estate, Chania, Greece</SubHeadingLight>
+            <SubHeadingLight
+              className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}
+            >
+              <Link
+                url={'https://maps.app.goo.gl/b7e7xYdP1ypEaHDN8'}
+                text={'Cambos Estate, Chania, Greece'}
+              />
+            </SubHeadingLight>
           </Stack>
         </Center>
       </div>
