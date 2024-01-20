@@ -17,7 +17,7 @@ export const ImageSection = ({
   const { isXSmallWidth } = useDeviceWidth();
   return (
     <div style={{ position: 'relative', backgroundColor: '#FBF9F6' }}>
-      <ParallaxBanner style={{ aspectRatio: 2.5 }}>
+      <ParallaxBanner style={{ aspectRatio: 3 }}>
         <ParallaxBannerLayer speed={isXSmallWidth ? -3 : -5}>
           <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
         </ParallaxBannerLayer>
@@ -27,10 +27,21 @@ export const ImageSection = ({
 };
 
 export const DoubleImageSection = (): ReactElement => {
+  const { isXSmallWidth, isSmallWidth } = useDeviceWidth();
   return (
-    <Group className={styles.doubleImageContainer} gap={0}>
-      <Image src={nyeImage} className={styles.nyeImage} />
-      <Image src={creteImage} className={styles.creteImage} />
-    </Group>
+    <div style={{ position: 'relative', backgroundColor: '#FBF9F6' }}>
+      <ParallaxBanner style={{ aspectRatio: isSmallWidth ? 1.5 : 3 }}>
+        <ParallaxBannerLayer speed={isXSmallWidth ? -3 : -5}>
+          <Group className={styles.doubleImageContainer} gap={0}>
+            <div style={{ width: '40%' }}>
+              <Image src={nyeImage} className={styles.nyeImage} />
+            </div>
+            <div style={{ width: '60%' }}>
+              <Image src={creteImage} className={styles.creteImage} />
+            </div>
+          </Group>
+        </ParallaxBannerLayer>
+      </ParallaxBanner>
+    </div>
   );
 };
