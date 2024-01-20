@@ -66,7 +66,7 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
             next to you in life is looking out at the same horizon. When we gaze
             at our life together, this wedding stands as the symbolic start of
             the main act of this story, and if the prologue has been any
-            indication, it’s going to be an incredibly beautiful and Crasi life.
+            indication, it’s going to be an incredibly beautiful and Crasi life!
           </Body>
         </Stack>
       </Center>
