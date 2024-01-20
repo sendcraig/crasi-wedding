@@ -35,25 +35,38 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
         <Stack gap={0} justify={'flex-end'} maw={1200}>
           <SectionTitle>Our Story</SectionTitle>
           <Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            eget scelerisque felis, quis venenatis dolor. Cras laoreet nulla
-            eget est viverra, non posuere leo accumsan. Nunc maximus aliquam
-            elit malesuada iaculis. Etiam vel nisl pretium, imperdiet nibh ac,
-            tempus nisi. Donec sodales vel massa quis fermentum. Sed volutpat
-            bibendum ipsum at tincidunt. Aliquam massa est, scelerisque ut dui
-            blandit, varius eleifend lorem. Nam bibendum at augue sit amet
-            egestas.
+            To start at the beginning, the story of Craig & Josi starts on the
+            dance floors of a Berlin nightclub. Boy sees girl, girl talks to
+            boy, sparks fly, and life finally really begins for these two lucky
+            hearts. The music carries them long into the night, and the magic
+            carries them into the adventure-filled years that follow. Some
+            couples start slow, and some take off like a rocket - and Craig &
+            Josi continue to enjoy the ride.
             <br />
             <br />
-            Vivamus imperdiet, metus et hendrerit accumsan, risus urna viverra
-            neque, sed pellentesque dui massa et sem. Sed rhoncus nisi a est
-            aliquet imperdiet. Sed suscipit at neque quis suscipit. Fusce sed
-            ipsum quis lectus feugiat euismod. Ut quis justo tristique mauris
-            venenatis scelerisque sit amet vitae diam. Sed placerat quis nisi id
-            euismod. Nunc non ex non lacus placerat convallis. Nunc tristique
-            dui eu magna convallis, quis mollis orci fermentum. Nunc auctor elit
-            id mi facilisis feugiat. Suspendisse velit lorem, finibus non
-            pharetra non, scelerisque vel dolor.
+            It’s safe to say we’ve spent our 6 years together living life to the
+            absolute fullest. We’ve traveled the world together and made friends
+            from all corners of the globe. We’ve watched and supported as we’ve
+            grown both personally and professionally. We’ve challenged ourselves
+            to accomplish our goals both individually and as partners. And if
+            one thing is absolutely certain, we’ve made sure to always have fun
+            together along the way!
+            <br />
+            <br />
+            Out of all of our adventures together, our trip to Crete in 2020
+            stands out as one of the most romantic and impactful experiences
+            we’ve shared. We always said how much we would love to get married
+            in such a beautiful setting, and now we’re so excited to be able to
+            make that dream come true. We couldn’t be happier to invite you to
+            join us so we can bring together the people we love to celebrate
+            with us.
+            <br />
+            <br />
+            There’s no comfort in the world like knowing that the person sitting
+            next to you in life is looking out at the same horizon. When we gaze
+            at our life together, this wedding stands as the symbolic start of
+            the main act of this story, and if the prologue has been any
+            indication, it’s going to be an incredibly beautiful and Crasi life.
           </Body>
         </Stack>
       </Center>
