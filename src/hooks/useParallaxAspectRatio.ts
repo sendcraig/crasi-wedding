@@ -16,7 +16,6 @@ export const useParallaxAspectRation = (
 
   const calculateCurrentAspectRatio = useCallback(() => {
     const clientRectHeight = imageRef.current?.getBoundingClientRect().height;
-    console.log('clientRectHeight', imageRef.current?.getBoundingClientRect());
     const height = maxHeight
       ? Math.min(clientRectHeight ?? 0, maxHeight)
       : clientRectHeight;

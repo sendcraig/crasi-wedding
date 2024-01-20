@@ -5,6 +5,7 @@ import creteImage from '../../assets/images/crete.jpg';
 import styles from './ImageSection.module.scss';
 import cx from 'classnames';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 
 export const ImageSection = ({
   imageSrc,
@@ -13,10 +14,11 @@ export const ImageSection = ({
   imageSrc: string;
   imageClassName?: string;
 }): ReactElement => {
+  const { isXSmallWidth } = useDeviceWidth();
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', backgroundColor: '#FBF9F6' }}>
       <ParallaxBanner style={{ aspectRatio: 2.5 }}>
-        <ParallaxBannerLayer speed={-5}>
+        <ParallaxBannerLayer speed={isXSmallWidth ? -3 : -5}>
           <Image src={imageSrc} className={cx(imageClassName, styles.image)} />
         </ParallaxBannerLayer>
       </ParallaxBanner>

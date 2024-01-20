@@ -20,7 +20,7 @@ const THINGS_TO_DO_SECTIONS = [
   },
   {
     title: 'Arts & History',
-    body: "Greece in general is rich with history, and Crete is no exception. There are numerous ruins and landmarks, mostly concentrated in the eastern part of the island. There are numerous museums in Chania where one can learn more about the ancient and more modern history of the area.<br/><br/>On the history topic, if you're stopping in Athens on the way to Crete visiting the Acropolis is a must. The iconic structure itself is impressive, but its hilltop location also offers 360° panoramic views of the city.",
+    body: "Greece in general is rich with history, and Crete is no exception. There are numerous ruins and landmarks, mostly concentrated in the eastern part of the island. There are numerous museums in Chania where one can learn more about the ancient and more modern history of the area.<br/><br/>On the history topic, if you're stopping in Athens on the way to Crete visiting the Acropolis is a must. Its hilltop location also offers 360° panoramic views of the city.",
   },
 ];
 
