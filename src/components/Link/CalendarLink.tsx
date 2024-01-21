@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import { Link } from './Link';
+import { Link } from './LinkText';
 import { isApple } from '../utils';
 
 type Props = {

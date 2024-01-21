@@ -59,31 +59,80 @@
           "note": "Main Lawn",
           "body": "The dinner and reception will be held on the main lawn at Cambos Estate. Speeches, music, dancing, and other wedding shenanigans will take place under the setting sun and continue into the night."
         }
-      }
-    }
-  },
-  "de": {
-    "translation": {
-      "hero": {
-        "subtitle": "heiraten.",
-        "days": "Tage",
-        "hours": "Studen",
-        "minutes": "Minuten",
-        "seconds": "Sekunden"
       },
-      "tabs": {
-        "our-story": "Unsere Story",
-        "our-wedding": "Unsere Hochzeit",
-        "itinerary": "Zeitplan",
-        "travel": "Hinflug",
-        "things-to-do": "Aktivitäten",
-        "gifts-registry": "Geschenke",
-        "rsvp": "Zusagen",
-        "faq": "Fragen & Antworten"
+      "travel": {
+        "title": "Travel",
+        "getting-there": {
+          "title": "Getting there",
+          "body": "The wedding venue is located near Chania, Greece on the island of Crete. Chania has an airport with connections to many major European airports and cities. If you're interested in spending some more time in Greece, it may be worthwhile to search for international flights through Athens and then take a short domestic flight (or a longer ferry) from there to Crete."
+        },
+        "getting-around": {
+          "title": "Getting around",
+          "body": "To get around Crete it is advised to rent a car, although there are also taxi services available. In Athens the best way to get around is either with the metro or Uber, but renting a car is impractical. Note that there is no Uber on Crete, but plenty of taxi services available.<br/><br/>For the wedding ceremony, there will be shuttles to transport guests from their accommodation to the venue and back. There are many car rental companies with competitive rates in Crete, and the local small businesses tend to be quite friendly and reliable. Using a travel site like Kayak, Booking.com, or Expedia is probably the easiest way to search, but a classic Google also will also yield many results."
+        },
+        "where-to-stay": {
+          "title": "Where to stay",
+          "body": "There are many hotels and Airbnbs in Chania city, and many beautiful villas in the surrounding areas for larger parties. Our wedding planners have partnered with a number of local hotels at which guests can receive discounts by using their code when booking - <hotelLink>download the list here</hotelLink>. Some recommended sources for accommodations are Booking.com, Airbnb, and Vrbo. If you're booking a villa, sometimes you can get better rates by booking with the rental company directly."
+        }
       },
-      "our-story": {
-        "title": "Unsere Story",
-        "body": "test"
+      "things-to-do": {
+        "title": "Things To Do",
+        "beaches-nature": {
+          "title": "Beaches & Nature",
+          "body": "Crete is famous for its nature, and for its beaches in particular. The west side of the island is home to many fantastic beaches, the best and most famous of which are Balos and Elafonissi, but Falasarna, Marathi, and Loutraki beaches are also popular.<br/><br/>For the more adventurous, there is hiking in the southern and more mountainous parts of the island. The Kourtaliotiko Gorge in particular is known to be one of the most beautiful natural areas of the entire island, and is a little more than an hour drive from Chania."
+        },
+        "city-culture": {
+          "title": "City & Culture",
+          "body": "Chania is second-largest city in Crete, and has a beautiful Old Town and historic center. The large harbor in the city center is surrounded with restaurants, cafés, and shops as well as many historic sights. There are walking tours for those interested in learning more about the city.\n\nThe towns and villages near Chania are also full of charm, such as Kalyves, Almyrida, Vamos, and Gavalochori to the east, and Kissamos, Elos, and Kaliviani to the west."
+        },
+        "eat-drink": {
+          "title": "Eat & Drink",
+          "body": "There is an endless amount of delicious food in Crete, with Greek cuisine obviously being the star of the show. There are many good restaurants in the city center near the harbor, but also quite a few hidden gems in the less touristy areas. We also recommend travelling to nearby villages to visit an authentic taverna in the countryside and enjoy some Raki with your meal and the famous Cretan hospitality. We've started compiling a list of some of our favorites near Chania that we've either visited or been recommended, <foodLink>you can find it here</foodLink>."
+        }
+      },
+      "gifts-registry": {
+        "title": "Gifts & Registry",
+        "body": "The greatest gift we could ever hope for is to celebrate our wedding surrounded by friends & loved ones. We appreciate that many of you will travel huge distances to be there to support us, and those journeys and the time spent together are the only wedding gifts that we are asking for."
+      },
+      "rsvp": {
+        "title": "RSVP",
+        "link": "<rsvpLink>Please RSVP by clicking this link.</rsvpLink>",
+        "note": "Responses can be edited at any time, but we kindly request final responses by May 1st, 2024."
+      },
+      "faq": {
+        "title": "FAQs",
+        "dresscode": {
+          "q": "What should I wear to the wedding?",
+          "a": "We are recommending guests wear neutral or natural colors rather than bright flashy ones, to match the natural aesthetic of the olive grove and Cretan landscape (this means that white/cream/beige is also allowed). For the ladies, heels are of course welcome but stilettos are not recommended as the ceremony will take place in the middle of an olive grove without paved surfaces."
+        },
+        "children": {
+          "q": "Are kids and babies welcome at the wedding?",
+          "a": "Although we appreciate the little ones, the wedding is adults only and we're kindly asking to leave the kids at home so mom and dad have some time to play. If there is no way to organize childcare or you have a special case, please reach out to us directly to discuss."
+        },
+        "photos": {
+          "q": "Is it ok to take photos with my phone at the wedding?",
+          "a": "You are welcome to take photos during the reception & dinner, but we ask you refrain from taking photos during the ceremony to appreciate the moment and not to disrupt the view of the photographers & videographers. We can guarantee that there will be plenty of beautiful photos that you can access after the wedding even if you leave your phone in your pocket for the entire day!"
+        },
+        "language": {
+          "q": "Do most Greeks speak English?",
+          "a": "Yes! Being one of the leading tourist destinations in Europe, almost all locals speak English fluently. The same unfortunately can't be said of German, although it's likely that locals will know a few words as Greece is a popular destination for Germans."
+        },
+        "credit-cards": {
+          "q": "Can I use my credit card in Crete?",
+          "a": "Yes, you can use your card almost everywhere in Greece. However, it always makes sense to have a small amount of cash on hand as well. Make sure to inform your card provider of your travel plans to ensure your card doesn't get locked while you're abroad!"
+        },
+        "driving": {
+          "q": "Will my driver's license work in Crete?",
+          "a": "As of 2021, Americans are no longer required to obtain an International Driving Permit from AAA. Europeans will be able to use their national driving license without any problems in Greece."
+        },
+        "weather": {
+          "q": "What is the weather like in Crete in late September?",
+          "a": "Crete has a very hot climate, and although this cools at the end of summer it will still be very warm, with daily high averages around 25-30°C/75-85°F."
+        },
+        "greece-info": {
+          "q": "Where can I find more info on things to do in Crete/Greece?",
+          "a": "We've listed a few things above, but if you're interested in learning even more about this beautiful island, we recommend checking out <creteLink>the official Crete website.</creteLink> For more information on Greece as a whole, <discoverGreeceLink>Discover Greece</discoverGreeceLink> has some excellent guides with information about the different regions of the country."
+        }
       }
     }
   }

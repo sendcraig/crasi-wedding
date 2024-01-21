@@ -6,33 +6,36 @@ import {
   BodyInformational,
   SectionTitle,
 } from '../typography/Typography';
-import { Link } from '../Link/Link';
-import styles from '../SaveTheDate/SaveTheDate.module.scss';
-import cx from 'classnames';
-import { hasTouchSupport } from '../utils';
+import { LinkText } from '../Link/LinkText';
+import { Trans, useTranslation } from 'react-i18next';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
 };
 
 export const RSVP = ({ scrollRef }: Props): ReactElement => {
+  const { t } = useTranslation();
+
   return (
     <InfoSection scrollRef={scrollRef}>
       <Stack>
-        <SectionTitle>RSVP</SectionTitle>
+        <SectionTitle>{t('rsvp.title')}</SectionTitle>
         <Center mt={-16} mb={16}>
           <BodyInformational>
-            <Link
-              url={'https://withjoy.com/craig-and-josephin/rsvp'}
-              text={'Please RSVP by clicking this link.'}
-              className={cx({ [styles.boldOnHover]: !hasTouchSupport() })}
+            <Trans
+              i18nKey={'rsvp.link'}
+              t={t}
+              components={{
+                rsvpLink: (
+                  <LinkText
+                    url={'https://withjoy.com/craig-and-josephin/rsvp'}
+                  />
+                ),
+              }}
             />
           </BodyInformational>
         </Center>
-        <Body center>
-          Responses can be edited at any time, but we kindly request final
-          responses by May 1st, 2024.
-        </Body>
+        <Body center>{t('rsvp.note')}</Body>
       </Stack>
     </InfoSection>
   );

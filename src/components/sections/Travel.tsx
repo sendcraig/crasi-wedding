@@ -1,20 +1,22 @@
 import React, { ReactElement } from 'react';
-import { Center, Stack, TypographyStylesProvider } from '@mantine/core';
+import { Center, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle, SubHeading } from '../typography/Typography';
+import { Trans, useTranslation } from 'react-i18next';
+import { LinkText } from '../Link/LinkText';
 
 const TRAVEL_SECTIONS = [
   {
-    title: 'Getting there',
-    body: "The wedding venue is located near Chania, Greece on the island of Crete. Chania has an airport with connections to many major European airports and cities. If you're interested in spending some more time in Greece, it may be worthwhile to search for international flights through Athens and then take a short domestic flight (or a longer ferry) from there to Crete.",
+    title: 'getting-there.title',
+    body: 'getting-there.body',
   },
   {
-    title: 'Getting around',
-    body: 'To get around Crete it is advised to rent a car, although there are also taxi services available. In Athens the best way to get around is either with the metro or Uber, but renting a car is impractical. Note that there is no Uber on Crete, but plenty of taxi services available.<br/><br/>For the wedding ceremony, there will be shuttles to transport guests from their accommodation to the venue and back. There are many car rental companies with competitive rates in Crete, and the local small businesses tend to be quite friendly and reliable. Using a travel site like Kayak, Booking.com, or Expedia is probably the easiest way to search, but a classic Google also will also yield many results.',
+    title: 'getting-around.title',
+    body: 'getting-around.body',
   },
   {
-    title: 'Where to stay',
-    body: "There are many hotels and Airbnbs in Chania city, and many beautiful villas in the surrounding areas for larger parties. Our wedding planners have partnered with a number of local hotels at which guests can receive discounts by using their code when booking - <a target='_blank' href='../../assets/docs/ChaniaHotelList.pdf'>download the list here</a>. Some recommended sources for accommodations are Booking.com, Airbnb, and Vrbo. If you're booking a villa, sometimes you can get better rates by booking with the rental company directly (for example, <a href='https://etouri.loggiabuilder.net/' target='_blank'>Etouri villas</a> has some beautiful villas that are typically pricier on other sites).",
+    title: 'where-to-stay.title',
+    body: 'where-to-stay.body',
   },
 ];
 
@@ -23,22 +25,28 @@ type Props = {
 };
 
 export const Travel = ({ scrollRef }: Props): ReactElement => {
+  const { t } = useTranslation();
+
   return (
     <InfoSection scrollRef={scrollRef}>
       <Center>
         <Stack maw={1200}>
-          <SectionTitle>Travel</SectionTitle>
+          <SectionTitle>{t('travel.title')}</SectionTitle>
           {TRAVEL_SECTIONS.map((section, idx) => (
             <Stack
               key={`travel-section-${idx}`}
               pb={idx === TRAVEL_SECTIONS.length - 1 ? 0 : 24}
             >
-              <SubHeading>{section.title}</SubHeading>
-              <TypographyStylesProvider p={0}>
-                <Body>
-                  <div dangerouslySetInnerHTML={{ __html: section.body }} />
-                </Body>
-              </TypographyStylesProvider>
+              <SubHeading>{t(`travel.${section.title}`)}</SubHeading>
+              <Body>
+                <Trans
+                  i18nKey={t(`travel.${section.body}`)}
+                  t={t}
+                  components={{
+                    hotelLink: <LinkText url={'https://www.youtube.com'} />,
+                  }}
+                />
+              </Body>
             </Stack>
           ))}
         </Stack>

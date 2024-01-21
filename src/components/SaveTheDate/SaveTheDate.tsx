@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import styles from './SaveTheDate.module.scss';
 import { Background } from './Background';
-import { Link } from '../Link/Link';
 import { CalendarLink } from '../Link/CalendarLink';
 import { hasTouchSupport } from '../utils';
 import cx from 'classnames';
+import { Link } from '../Link/LinkText';
 
 export const SaveTheDate = (): ReactElement => {
   return (

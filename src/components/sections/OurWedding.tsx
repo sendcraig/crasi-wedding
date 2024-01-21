@@ -11,7 +11,7 @@ import {
 } from '../typography/Typography';
 import cx from 'classnames';
 import { useDeviceWidth } from '../../hooks/useDeviceWidth';
-import { Link } from '../Link/Link';
+import { LinkText } from '../Link/LinkText';
 import { hasTouchSupport } from '../utils';
 import { CalendarLink } from '../Link/CalendarLink';
 import { useTranslation } from 'react-i18next';
@@ -58,7 +58,7 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
             <SubHeadingLight
               className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}
             >
-              <Link
+              <LinkText
                 url={'https://maps.app.goo.gl/b7e7xYdP1ypEaHDN8'}
                 text={t('our-wedding.location')}
               />
