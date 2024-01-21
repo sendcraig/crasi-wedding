@@ -5,9 +5,9 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { Flex, Grid, Group, Image, Stack, Text, Title } from '@mantine/core';
+import { Flex, Grid, Group, Image, Stack, Text } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import { Body, SubHeading } from '../typography/Typography';
+import { Body, SectionTitle, SubHeading } from '../typography/Typography';
 import southAfricaImage from '../../assets/images/SA.jpg';
 import styles from './Itinerary.module.scss';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
@@ -131,9 +131,7 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
           pr={isSmallWidth ? 48 : 96}
         >
           <Stack py={64} gap={32} ref={textRef}>
-            <Title order={3} style={{ alignSelf: 'center' }} pr={32}>
-              Itinerary
-            </Title>
+            <SectionTitle>Itinerary</SectionTitle>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
                 <SubHeading className={styles.date} justify>

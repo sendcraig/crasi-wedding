@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Center, Image, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
-import summertimeImage from '../../assets/images/balcony.jpg';
+import parisImage from '../../assets/images/paris.webp';
 import { Body, SectionTitle } from '../typography/Typography';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import styles from './OurStory.module.scss';
@@ -25,7 +25,7 @@ export const OurStory = ({ scrollRef }: Props): ReactElement => {
         <ParallaxBanner style={{ aspectRatio: '1/1.25', maxWidth: 700 }}>
           <ParallaxBannerLayer speed={isXSmallWidth ? -3 : -6}>
             <Image
-              src={summertimeImage}
+              src={parisImage}
               className={cx(styles.image, { [styles.mobile]: isXSmallWidth })}
             />
           </ParallaxBannerLayer>

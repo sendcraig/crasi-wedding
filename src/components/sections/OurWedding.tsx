@@ -1,10 +1,14 @@
 import React, { ReactElement } from 'react';
-import { Center, Stack, Title } from '@mantine/core';
+import { Center, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import oliveGroveImage from '../../assets/images/oliveGrove.jpg';
 import styles from './OurWedding.module.scss';
 import boldStyles from '../SaveTheDate/SaveTheDate.module.scss';
-import { BodyStretch, SubHeadingLight } from '../typography/Typography';
+import {
+  BodyStretch,
+  SectionTitle,
+  SubHeadingLight,
+} from '../typography/Typography';
 import cx from 'classnames';
 import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 import { Link } from '../Link/Link';
@@ -39,7 +43,7 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
             justify={'space-evenly'}
             className={styles.textContainer}
           >
-            <Title order={3}>Our Wedding</Title>
+            <SectionTitle>Our Wedding</SectionTitle>
             <BodyStretch>is on the</BodyStretch>
             <SubHeadingLight
               className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}

@@ -15,13 +15,13 @@ import { GiftsRegistry } from '../sections/GiftsRegistry';
 import { RSVP } from '../sections/RSVP';
 import { FAQ } from '../sections/FAQ';
 import festivalOfLightsImage from '../../assets/images/festivalOfLights.jpg';
-import croatiaImage from '../../assets/images/croatia.jpg';
+import croatiaImage from '../../assets/images/croatia.webp';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
   headings: {
-    fontFamily: 'Italianno',
+    fontFamily: 'Noto Serif Display',
     fontWeight: '500',
     sizes: {
       h1: { fontSize: '64px' },

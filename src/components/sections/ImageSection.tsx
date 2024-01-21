@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Group, Image } from '@mantine/core';
-import nyeImage from '../../assets/images/NYE.jpg';
+import nyeImage from '../../assets/images/NYE.webp';
 import creteImage from '../../assets/images/crete.jpg';
 import styles from './ImageSection.module.scss';
 import cx from 'classnames';

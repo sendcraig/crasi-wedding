@@ -51,14 +51,9 @@
 .oliveBranch2 {
   position: absolute;
   transform: rotate(-45deg);
-  bottom: 5%;
+  bottom: 3%;
   right: -5%;
   width: min(40vw, 400px);
-  //z-index: 3;
-}
-
-.heroTextWrapper {
-  //position: relative;
 }
 
 .heroTitle {
@@ -83,4 +78,13 @@
 
 .textShadow {
   text-shadow: 4px 8px 18px rgba(0,0,0,0.12);
+}
+
+.dateText {
+  font-size: min(4vw,18px) !important;
+  font-weight: 100 !important;
+
+  animation: blurIn 1s ease-in-out 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }

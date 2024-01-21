@@ -10,8 +10,9 @@ export const SectionTitle = ({
 }>): ReactElement => {
   return (
     <Title
-      order={3}
+      order={4}
       pb={32}
+      fw={300}
       style={{ textAlign: 'center' }}
       className={className}
     >
