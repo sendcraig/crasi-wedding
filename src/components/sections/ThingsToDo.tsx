@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Center, Grid, Stack, TypographyStylesProvider } from '@mantine/core';
+import { Center, Grid, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle, SubHeading } from '../typography/Typography';
 import styles from './ThingsToDo.module.scss';
@@ -21,21 +21,6 @@ const THINGS_TO_DO_SECTIONS = [
     body: 'eat-drink.body',
   },
 ];
-
-const Section = ({ title, body }: { title: string; body: string }) => {
-  return (
-    <Center>
-      <Stack>
-        <SubHeading center>{title}</SubHeading>
-        <TypographyStylesProvider p={0}>
-          <Body center className={styles.section}>
-            <div dangerouslySetInnerHTML={{ __html: body }} />
-          </Body>
-        </TypographyStylesProvider>
-      </Stack>
-    </Center>
-  );
-};
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
