@@ -11,8 +11,8 @@ import {
   Router,
   RouterProvider,
 } from '@tanstack/react-router';
-import { SaveTheDate } from './components/SaveTheDate/SaveTheDate';
 import { InfoWebsite } from './components/InfoWebsite/InfoWebsite';
+import { SaveTheDate } from './components/SaveTheDate/SaveTheDate';
 
 const rootRoute = new RootRoute({
   component: Outlet,
@@ -21,13 +21,13 @@ const rootRoute = new RootRoute({
 const stdRoute = new Route({
   getParentRoute: () => rootRoute,
   path: '/',
-  component: SaveTheDate,
+  component: InfoWebsite,
 });
 
 const infoRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/info',
-  component: InfoWebsite,
+  path: '/save-the-date',
+  component: SaveTheDate,
 });
 
 const routeTree = rootRoute.addChildren([stdRoute, infoRoute]);
