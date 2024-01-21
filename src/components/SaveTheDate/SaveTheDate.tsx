@@ -43,9 +43,16 @@ export const SaveTheDate = (): ReactElement => {
                 />
               </h3>
             </div>
-            <h3 className={styles.infoText}>
-              OFFICIAL INVITATION & DETAILS TO FOLLOW
-            </h3>
+            <h2
+              className={cx(styles.infoText, {
+                [styles.boldOnHover]: !hasTouchSupport(),
+              })}
+            >
+              <Link
+                url={'https://crasi.love/info'}
+                text={'OFFICIAL WEDDING WEBSITE & INFO'}
+              />
+            </h2>
           </div>
         </div>
       </div>
