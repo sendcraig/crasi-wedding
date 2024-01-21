@@ -1,14 +1,23 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import styles from './HeroSection.module.scss';
 import oliveBranch2 from '../../assets/images/olive-branch-2.webp';
 import oliveBranch3 from '../../assets/images/olive-branch-3.webp';
-import { Image, Stack, Title } from '@mantine/core';
+import { Divider, Group, Image, Stack, Text, Title } from '@mantine/core';
 import cx from 'classnames';
 import { MyCountdown } from './Countdown';
 import { useDeviceWidth } from '../../hooks/useDeviceWidth';
+import { useTranslation } from 'react-i18next';
 
 export const HeroSection = (): ReactElement => {
+  const { t, i18n } = useTranslation();
   const { isSmallWidth } = useDeviceWidth();
+
+  const changeLanguage = useCallback(
+    (language: 'en' | 'de') => {
+      i18n.changeLanguage(language);
+    },
+    [i18n],
+  );
 
   return (
     <div className={styles.heroContainer}>
@@ -20,6 +29,23 @@ export const HeroSection = (): ReactElement => {
           <Image src={oliveBranch2} />
         </div>
       </div>
+      <div className={styles.languageSelect}>
+        <Group>
+          <Text
+            className={styles.languageButton}
+            onClick={() => changeLanguage('en')}
+          >
+            EN
+          </Text>
+          <Divider orientation="vertical" />
+          <Text
+            className={styles.languageButton}
+            onClick={() => changeLanguage('de')}
+          >
+            DE
+          </Text>
+        </Group>
+      </div>
       <Stack
         justify={'center'}
         align={'center'}
@@ -30,7 +56,7 @@ export const HeroSection = (): ReactElement => {
           Craig & Josephin
         </Title>
         <Title order={5} className={cx(styles.heroSubtitle, styles.textShadow)}>
-          are getting married.
+          {t('hero.subtitle')}
         </Title>
         <MyCountdown />
       </Stack>

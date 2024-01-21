@@ -14,7 +14,7 @@ const TRAVEL_SECTIONS = [
   },
   {
     title: 'Where to stay',
-    body: "There are many hotels and Airbnbs in Chania city, and many beautiful villas in the surrounding areas for larger parties. We have reserved a block of rooms in the <todo - hotel> hotel if you use the code(?). Some recommended sources for accommodations are Booking.com, Airbnb, and Vrbo. If you're booking a villa, sometimes you can get better rates by booking with the rental company directly (for example, <a href='https://etouri.loggiabuilder.net/'>Etouri villas</a> has some beautiful villas that are typically pricier on other sites).",
+    body: "There are many hotels and Airbnbs in Chania city, and many beautiful villas in the surrounding areas for larger parties. Our wedding planners have partnered with a number of local hotels at which guests can receive discounts by using their code when booking - <a target='_blank' href='../../assets/docs/ChaniaHotelList.pdf'>download the list here</a>. Some recommended sources for accommodations are Booking.com, Airbnb, and Vrbo. If you're booking a villa, sometimes you can get better rates by booking with the rental company directly (for example, <a href='https://etouri.loggiabuilder.net/' target='_blank'>Etouri villas</a> has some beautiful villas that are typically pricier on other sites).",
   },
 ];
 

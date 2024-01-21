@@ -1,0 +1,20 @@
+{
+  "en": {
+    "translation": {
+      "hero.subtitle": "are getting married.",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    }
+  },
+  "de": {
+    "translation": {
+      "hero.subtitle": "heiraten.",
+      "days": "Tage",
+      "hours": "Studen",
+      "minutes": "Minuten",
+      "seconds": "Sekunden"
+    }
+  }
+}

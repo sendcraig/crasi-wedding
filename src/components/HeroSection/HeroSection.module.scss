@@ -88,3 +88,20 @@
   animation-fill-mode: forwards;
   opacity: 0;
 }
+
+.languageSelect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.languageButton {
+  cursor: pointer;
+  font-weight: 200;
+
+  &:hover {
+    font-weight: 300;
+  }
+}

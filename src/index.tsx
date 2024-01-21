@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '@mantine/core/styles.css';
 import './global.module.scss';
+import './config/i18n';
 import reportWebVitals from './reportWebVitals';
 import {
   Outlet,
