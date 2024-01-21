@@ -26,6 +26,7 @@ export const Link = ({
     </a>
   );
 };
+
 export const LinkText = ({
   url,
   text,
@@ -41,6 +42,17 @@ export const LinkText = ({
       className={cx(styles.oliveLink, className)}
     >
       {text}
+      {children}
+    </a>
+  );
+};
+
+export const DownloadLink = ({
+  onClick,
+  children,
+}: PropsWithChildren<{ onClick: () => void }>): JSX.Element => {
+  return (
+    <a className={styles.oliveLink} onClick={onClick}>
       {children}
     </a>
   );

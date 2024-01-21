@@ -1,9 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { Center, Stack } from '@mantine/core';
 import { InfoSection } from '../InfoSection/InfoSection';
 import { Body, SectionTitle, SubHeading } from '../typography/Typography';
 import { Trans, useTranslation } from 'react-i18next';
-import { LinkText } from '../Link/LinkText';
+import { DownloadLink } from '../Link/LinkText';
+// import pdf from '../../../public/ChaniaHotelList.pdf'
 
 const TRAVEL_SECTIONS = [
   {
@@ -27,6 +28,16 @@ type Props = {
 export const Travel = ({ scrollRef }: Props): ReactElement => {
   const { t } = useTranslation();
 
+  const downloadPDF = useCallback(() => {
+    const pdfUrl = 'ChaniaHotelList.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = pdfUrl;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, []);
+
   return (
     <InfoSection scrollRef={scrollRef}>
       <Center>
@@ -43,7 +54,7 @@ export const Travel = ({ scrollRef }: Props): ReactElement => {
                   i18nKey={t(`travel.${section.body}`)}
                   t={t}
                   components={{
-                    hotelLink: <LinkText url={'https://www.youtube.com'} />,
+                    hotelLink: <DownloadLink onClick={downloadPDF} />,
                   }}
                 />
               </Body>
