@@ -40,7 +40,7 @@
         "saturday": "Saturday, September 28th",
         "family-brunch": {
           "name": "Family Brunch",
-          "note": "Family members only",
+          "note": "Regal Residence (family members only)",
           "body": "For friends, Saturday is free to explore Chania and the beautiful surrounding area. For the families, we will host a light brunch in the villa where we will be staying."
         },
         "sunday": "Sunday, September 29th",
@@ -132,6 +132,143 @@
         "greece-info": {
           "q": "Where can I find more info on things to do in Crete/Greece?",
           "a": "We've listed a few things above, but if you're interested in learning even more about this beautiful island, we recommend checking out <creteLink>the official Crete website.</creteLink> For more information on Greece as a whole, <discoverGreeceLink>Discover Greece</discoverGreeceLink> has some excellent guides with information about the different regions of the country."
+        }
+      }
+    }
+  },
+  "de": {
+    "translation": {
+      "hero": {
+        "subtitle": "heiraten.",
+        "days": "Tage",
+        "hours": "Stunden",
+        "minutes": "Minuten",
+        "seconds": "Sekunden"
+      },
+      "tabs": {
+        "our-story": "Unsere Story",
+        "our-wedding": "Unsere Hochzeit",
+        "itinerary": "Ablauf",
+        "travel": "Anreise",
+        "things-to-do": "Aktivitäten auf Kreta",
+        "gifts-registry": "Wünsche & Geschenke",
+        "rsvp": "Rückmeldung",
+        "faq": "Fragen & Antworten"
+      },
+      "our-story": {
+        "title": "Unsere Story",
+        "body": "Die Geschichte, die wir niemals müde werden zu erzählen - die “Crasi” Story - begann auf der Tanzfläche eines Berliner Nachtclubs. Hier trafen sich zum aller ersten Mal unsere Blicke, wir flirteten und Funken sprühten. Die Musik trug uns noch bis tief in die Nacht hinein, und die Magie dieser Begegnung zog sich durch die darauf folgenden abenteuerlichen Jahre. Manche Paare fangen langsam an, andere heben ab wie eine Rakete - und wir geniessen noch immer jeden Moment dieses Höhenflugs.<br/><br/>Wir können mit Gewissheit sagen, dass wir die 6 Jahre, die wir zusammen verbrachten, in den vollsten Zügen genossen haben. Wir haben zusammen die Welt bereist und haben Freundschaften in allen Ecken der Welt geschlossen. Wir haben einander mit Stolz dabei zugesehen und unterstützt, sowohl in persönlicher als auch in beruflicher Hinsicht erwachsen zu werden. Wir haben uns gegenseitig herausgefordert, unsere Ziele zu erreichen, sowohl individuell als auch als Team. Und wenn eines absolut sicher ist, dann, dass wir auf unserem Weg immer jede Menge Spaß miteinander hatten!<br/><br/>Von all unseren gemeinsamen Abenteuern ist unsere Reise nach Kreta im Covid-Jahr 2020 eines der romantischsten und bedeutendsten Momente, die wir gemeinsam erlebt haben. Wir haben immer davon gesprochen, wie gerne wir an einem so wunderschönen Ort heiraten würden, und jetzt freuen wir uns so sehr, dass wir diesen Traum verwirklichen können. Es erfüllt uns mit unglaublicher Freude nun mit euch, den Menschen, die wir am allerliebsten haben, gemeinsam den schönsten Tag unseres Lebens zu feiern.<br/><br/>Es gibt keinen größeren Segen auf der Welt, als zu wissen, dass die Person, die im Leben neben einem steht, auf denselben Horizont blickt. Wenn wir auf unser gemeinsames Leben blicken, ist diese bevorstehende Hochzeitsfeier der Beginn des Hauptaktes unserer Liebesgeschichte, und wenn der Prolog ein Hinweis darauf war, wie es weitergeht, dann wird es ganz sicher ein unglaublich schönes und Crasi Leben werden. ♡"
+      },
+      "our-wedding": {
+        "title": "Unsere Hochzeit",
+        "is-on": "findet statt am",
+        "date": "29. September 2024",
+        "at": "im",
+        "location": "Cambos Anwesen bei Chania, Kreta"
+      },
+      "itinerary": {
+        "title": "Ablauf",
+        "friday": "Freitag, 27. September",
+        "evening-social": {
+          "name": "Evening Social",
+          "note": "Location folgt",
+          "body": "Mit denjenigen, die bereits in Chania eingetroffen sind, würden wir gerne in lockerer Runde etwas trinken gehen und uns gemeinsam auf die bevorstehenden Tage einstimmen. Die Teilnahme ist völlig freiwillig und die Atmosphäre locker."
+        },
+        "saturday": "Samstag, 28. September",
+        "family-brunch": {
+          "name": "Family Brunch",
+          "note": "Regal Residence (nur für Familienmitglieder)",
+          "body": "Für Freunde steht der Samstag zur freien Verfügung, um Chania und die schöne Umgebung zu erkunden. Für die Familien veranstalten wir einen gemütlichen Brunch in der Villa, in der wir untergebracht sind."
+        },
+        "sunday": "Sonntag, 29. September",
+        "ceremony": {
+          "name": "Hochzeitszeremonie",
+          "note": "Cambos Anwesen",
+          "body": "Die Zeremonie findet in einem romantischen Olivenhain auf einem Anwesen südöstlich von Chania statt. Für den Transfer der Gäste zum und vom Veranstaltungsort stehen Shuttles zur Verfügung."
+        },
+        "cocktail-hour": {
+          "name": "Cocktail Hour",
+          "note": "Cyprus Trees",
+          "body": "Unmittelbar nach der Zeremonie findet unter den Zypressenbäumen am Eingang des Veranstaltungsortes ein Cocktailempfang statt. Die Braut und der Bräutigam werden während dieser Zeit mehrere Millionen Fotos knipsen."
+        },
+        "dinner-reception": {
+          "name": "Dinner & Party",
+          "note": "Hauptgarten",
+          "body": "Das Dinner und die anschließende Party finden auf der großen romantisch erleuchteten Rasenfläche des Cambos Anwesens statt. Die Toasts, Musik, Tanzereien und andere Hochzeitsspielereien finden unter der untergehenden Sonne statt und ziehen sich bis in die Nacht hinein."
+        }
+      },
+      "travel": {
+        "title": "Anreise",
+        "getting-there": {
+          "title": "Anfahrt",
+          "body": "Der Veranstaltungsort befindet sich in der Nähe von Chania, auf der Insel Kreta. Chania verfügt über einen Flughafen mit Verbindungen zu vielen großen europäischen Flughäfen und Städten. Wenn ihr mehr Zeit in Griechenland verbringen möchtet, kann es sich lohnen, nach Flügen über Athen zu suchen und von dort einen kurzen Inlandsflug (oder eine längere Fähre) nach Kreta zu nehmen."
+        },
+        "getting-around": {
+          "title": "Unterwegs",
+          "body": "Um sich auf Kreta fortzubewegen, ist es ratsam, ein Auto zu mieten, aber es gibt auch Taxidienste. Am Tag der Hochzeit stehen Shuttles zur Verfügung."
+        },
+        "where-to-stay": {
+          "title": "Wo übernachten",
+          "body": "Es gibt viele Hotels und Airbnbs in Chania und viele schöne Villen in den umliegenden Gebieten für größere Gruppen. Wir haben einen Rabatt-Code für einige Hotels - <hotelLink>klick hier für die Liste</hotelLink>. Einige empfohlene Webseiten für Unterkünfte sind Booking.com, Airbnb, und Vrbo. Wenn ihr eine Villa bucht, könnt ihr manchmal günstigere Preise ergattern, wenn ihr direkt beim Vermieter bucht (z. B. hat Etouri Villas einige schöne Villen, die auf anderen Websites normalerweise teurer sind)."
+        }
+      },
+      "things-to-do": {
+        "title": "Aktivitäten auf Kreta",
+        "beaches-nature": {
+          "title": "Strände und Natur",
+          "body": "Kreta ist berühmt für seine einzigartige Landschaft und vor allem für seine Strände. Die Westseite der Insel beherbergt viele traumhafte Sandstrände, von denen die besten und bekanntesten Balos und Elafonissi sind, aber auch die Strände von Falasarna, Marathi und Loutraki sind sehr beliebt.<br/><br/>Abenteuerlustige können in den südlichen und bergigeren Teilen der Insel wandern. Die Kourtaliotiko-Schlucht gilt als eines der schönsten Naturgebiete der gesamten Insel und ist nur etwas mehr als eine Autostunde von Chania entfernt."
+        },
+        "city-culture": {
+          "title": "Stadt & Kultur",
+          "body": "Chania ist die zweitgrößte Stadt Kretas und verfügt über eine wunderschöne Altstadt und ein historisches Zentrum. Der große Hafen im Stadtzentrum ist umgeben von Restaurants, Cafés und Geschäften sowie von vielen historischen Sehenswürdigkeiten. Für diejenigen, die mehr über die Stadt erfahren möchten, werden Führungen zu Fuß angeboten.<br/><br/>Die Städte und Dörfer in der Nähe von Chania sind ebenfalls sehr reizvoll, wie z. B. Kalyves, Almyrida, Vamos und Gavalochori im Osten und Kissamos, Elos und Kaliviani im Westen."
+        },
+        "eat-drink": {
+          "title": "Essen und Trinken",
+          "body": "Auf Kreta gibt es eine unendliche Fülle an köstlichem Essen, wobei die griechische Küche natürlich der Star der Show ist. Es gibt viele gute Restaurants im Stadtzentrum in der Nähe des Hafens, aber auch einige versteckte Juwelen in den weniger touristischen Gegenden. Wir empfehlen auch, in die nahegelegenen Dörfer zu fahren, um eine authentische Taverne auf dem Lande zu besuchen und Raki zum Essen und die berühmte kretanische Gastfreundschaft zu genießen. Wir haben angefangen, <foodLink>eine Liste</foodLink> mit einigen unserer Lieblingsorte in der Nähe von Chania zusammenzustellen, die wir entweder besucht haben oder die uns empfohlen wurden."
+        }
+      },
+      "gifts-registry": {
+        "title": "Wünsche & Geschenke",
+        "body": "Das größte Geschenk, das wir uns wünschen können, ist, unsere Hochzeit im Kreise unserer Freunde und Familien zu feiern. Wir wissen es so sehr zu schätzen, dass viele von euch große Entfernungen zurücklegen, um bei uns zu sein, und diese Reisen und die gemeinsam verbrachte Zeit sind die einzigen Hochzeitsgeschenke, um die wir bitten."
+      },
+      "rsvp": {
+        "title": "Rückmeldung",
+        "link": "<rsvpLink>Um zu- oder abzusagen klickt bitte auf diesen Link.</rsvpLink>",
+        "note": "Die Antworten können jederzeit geändert werden, aber wir bitten um endgültige Antworten bis zum 1. Mai 2024."
+      },
+      "faq": {
+        "title": "Fragen & Antworten",
+        "dresscode": {
+          "q": "Gibt es einen Dresscode?",
+          "a": "Wir empfehlen unseren Gästen, neutrale oder natürliche Farben zu tragen, um der natürlichen Ästhetik des Olivenhains und der kretischen Landschaft Ausdruck zu verleihen (das heißt, dass auch weiß/creme/beige erlaubt sind). Für die Ladies sind Absätze natürlich willkommen, aber Stilettos sind nicht zu empfehlen, da die Zeremonie inmitten eines Olivenhains ohne gepflasterte Flächen stattfinden wird."
+        },
+        "children": {
+          "q": "Are kids and babies welcome at the wedding?",
+          "a": "Although we appreciate the little ones, the wedding is adults only and we're kindly asking to leave the kids at home so mom and dad have some time to play. If there is no way to organize childcare or you have a special case, please reach out to us directly to discuss."
+        },
+        "photos": {
+          "q": "Darf ich bei der Hochzeit Fotos mit meinem Handy machen?",
+          "a": "Ihr könnt gerne während des Empfangs und des Abendessens fotografieren, aber wir bitten euch, während der Zeremonie keine Fotos zu machen, um den Moment zu genießen und die Sicht der Fotografen und Videografen nicht zu stören. Wir können euch garantieren, dass es unzählige schöne Fotos geben wird, auf die ihr nach der Hochzeit zugreifen könnt, auch wenn ihr euer Handy den ganzen Tag über in der Tasche lasst!"
+        },
+        "language": {
+          "q": "Sprechen die meisten Griechen englisch oder deutsch?",
+          "a": "Englisch ja! Da Griechenland eines der beliebtesten Reiseziele in Europa ist, sprechen fast alle Einheimischen fließend Englisch. Das Gleiche kann man leider nicht von Deutsch sagen, obwohl es wahrscheinlich ist, dass die Einheimischen ein paar Worte kennen, da Griechenland ein beliebtes Reiseziel für Deutsche ist."
+        },
+        "credit-cards": {
+          "q": "Kann ich meine Kreditkarte auf Kreta benutzen?",
+          "a": "Ja, ihr könnt eure Kreditkarten fast überall in Griechenland benutzen. Es ist jedoch immer sinnvoll, auch einen kleinen Betrag an Bargeld mit sich zu führen. Informiert euren Kartenanbieter über deine Reisepläne, damit die Karte nicht gesperrt wird, während ihr im Ausland seid!"
+        },
+        "driving": {
+          "q": "Will my driver's license work in Crete?",
+          "a": "As of 2021, Americans are no longer required to obtain an International Driving Permit from AAA. Europeans will be able to use their national driving license without any problems in Greece."
+        },
+        "weather": {
+          "q": "Wie ist das Wetter auf Kreta im späten September?",
+          "a": "Kreta hat ein sehr heißes Klima, und obwohl es am Ende des Sommers abkühlt, wird es immer noch sehr warm sein, mit Tageshöchstwerten von 25-30°C."
+        },
+        "greece-info": {
+          "q": "Wo finde ich weitere Informationen über Aktivitäten auf Kreta?",
+          "a": "Wir haben oben ein paar Dinge aufgelistet, aber wenn ihr noch mehr über diese wunderschöne Insel erfahren möchten, empfehlen wir euch einen Blick auf die offizielle Kreta-Website zu werfen."
         }
       }
     }

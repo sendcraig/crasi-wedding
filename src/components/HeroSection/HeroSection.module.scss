@@ -91,12 +91,15 @@
 }
 
 .languageSelect {
-  visibility: hidden;
   position: absolute;
   top: 0;
   right: 0;
   padding-right: 8px;
   padding-top: 8px;
+
+  animation: blurIn 3s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .languageButton {
