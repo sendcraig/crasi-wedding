@@ -28,6 +28,7 @@ const FAQ_SECTIONS = [
   {
     question: 'children.q',
     answer: 'children.a',
+    skipDE: true,
   },
   {
     question: 'photos.q',
@@ -44,6 +45,7 @@ const FAQ_SECTIONS = [
   {
     question: 'driving.q',
     answer: 'driving.a',
+    skipDE: true,
   },
   {
     question: 'weather.q',
@@ -56,7 +58,7 @@ const FAQ_SECTIONS = [
 ];
 
 export const FAQ = ({ scrollRef }: Props): ReactElement => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isXSmallWidth } = useDeviceWidth();
 
   return (
@@ -71,6 +73,7 @@ export const FAQ = ({ scrollRef }: Props): ReactElement => {
             })}
           >
             {FAQ_SECTIONS.map((section) => {
+              if (i18n.language === 'de' && section.skipDE) return null;
               return (
                 <AccordionItem
                   key={section.question}

@@ -243,8 +243,8 @@
           "a": "Wir empfehlen unseren Gästen, neutrale oder natürliche Farben zu tragen, um der natürlichen Ästhetik des Olivenhains und der kretischen Landschaft Ausdruck zu verleihen (das heißt, dass auch weiß/creme/beige erlaubt sind). Für die Ladies sind Absätze natürlich willkommen, aber Stilettos sind nicht zu empfehlen, da die Zeremonie inmitten eines Olivenhains ohne gepflasterte Flächen stattfinden wird."
         },
         "children": {
-          "q": "Are kids and babies welcome at the wedding?",
-          "a": "Although we appreciate the little ones, the wedding is adults only and we're kindly asking to leave the kids at home so mom and dad have some time to play. If there is no way to organize childcare or you have a special case, please reach out to us directly to discuss."
+          "q": null,
+          "a": null
         },
         "photos": {
           "q": "Darf ich bei der Hochzeit Fotos mit meinem Handy machen?",
@@ -259,8 +259,8 @@
           "a": "Ja, ihr könnt eure Kreditkarten fast überall in Griechenland benutzen. Es ist jedoch immer sinnvoll, auch einen kleinen Betrag an Bargeld mit sich zu führen. Informiert euren Kartenanbieter über deine Reisepläne, damit die Karte nicht gesperrt wird, während ihr im Ausland seid!"
         },
         "driving": {
-          "q": "Will my driver's license work in Crete?",
-          "a": "As of 2021, Americans are no longer required to obtain an International Driving Permit from AAA. Europeans will be able to use their national driving license without any problems in Greece."
+          "q": null,
+          "a": null
         },
         "weather": {
           "q": "Wie ist das Wetter auf Kreta im späten September?",
