@@ -1,20 +1,90 @@
 {
   "en": {
     "translation": {
-      "hero.subtitle": "are getting married.",
-      "days": "days",
-      "hours": "hours",
-      "minutes": "minutes",
-      "seconds": "seconds"
+      "hero": {
+        "subtitle": "are getting married.",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds"
+      },
+      "tabs": {
+        "our-story": "Our Story",
+        "our-wedding": "Our Wedding",
+        "itinerary": "Itinerary",
+        "travel": "Travel",
+        "things-to-do": "Things To Do",
+        "gifts-registry": "Gifts & Registry",
+        "rsvp": "RSVP",
+        "faq": "FAQ"
+      },
+      "our-story": {
+        "title": "Our Story",
+        "body": "To start at the beginning, the story of Craig & Josi starts on the dance floors of a Berlin nightclub. Boy sees girl, girl talks to boy, sparks fly, and life finally really began for our two lucky hearts. The music carried us long into the night, and the magic has carried us into the adventure-filled years that followed. Some couples start slow, and some take off like a rocket - we found ourselves in the latter group, and we continue to enjoy the ride.<br/><br/>It’s safe to say we’ve spent our 6 years together living life to the absolute fullest. We’ve traveled the world together and made friends from all corners of the globe. We’ve watched and supported as we’ve grown both personally and professionally. We’ve challenged ourselves to accomplish our goals both individually and as partners. And if one thing is absolutely certain, we’ve made sure to always have fun together along the way!<br/><br/>Out of all of our adventures together, our trip to Crete in 2020 stands out as one of the most romantic and impactful experiences we’ve shared. We always said how much we would love to get married in such a beautiful setting, and now we’re so excited to be able to make that dream come true. We couldn’t be happier to invite you to join us so we can bring together the people we love to celebrate with us.<br/><br/>There’s no comfort in the world like knowing that the person sitting next to you in life is looking out at the same horizon. When we gaze at our life together, this wedding represents the start of the main act of this story, and if the prologue has been any indication, it’s going to be an incredibly beautiful and Crasi life. ♡"
+      },
+      "our-wedding": {
+        "title": "Our Wedding",
+        "is-on": "is on the",
+        "date": "29th of September, 2024",
+        "at": "at",
+        "location": "Cambos Estate, Chania, Greece"
+      },
+      "itinerary": {
+        "title": "Itinerary",
+        "friday": "Friday, September 27th",
+        "evening-social": {
+          "name": "Evening Social",
+          "note": "Location TBD",
+          "body": "For those who have already arrived in Chania, we'd love to grab a drink with you at a local bar. Attendance is entirely optional and vibes are casual. Come as you are!"
+        },
+        "saturday": "Saturday, September 28th",
+        "family-brunch": {
+          "name": "Family Brunch",
+          "note": "Family members only",
+          "body": "For friends, Saturday is free to explore Chania and the beautiful surrounding area. For the families, we will host a light brunch in the villa where we will be staying."
+        },
+        "sunday": "Sunday, September 29th",
+        "ceremony": {
+          "name": "Ceremony",
+          "note": "Cambos Estate",
+          "body": "The ceremony will be held in a romantic olive grove on a farm southeast of Chania. Transportation will be available to shuttle guests to and from the venue."
+        },
+        "cocktail-hour": {
+          "name": "Cocktail Hour",
+          "note": "Cyprus Trees",
+          "body": "Immediately following the ceremony, a cocktail hour will be held in the Cyprus trees near the venue’s entrance. The bride & groom will take several million photos at this time."
+        },
+        "dinner-reception": {
+          "name": "Dinner & Reception",
+          "note": "Main Lawn",
+          "body": "The dinner and reception will be held on the main lawn at Cambos Estate. Speeches, music, dancing, and other wedding shenanigans will take place under the setting sun and continue into the night."
+        }
+      }
     }
   },
   "de": {
     "translation": {
-      "hero.subtitle": "heiraten.",
-      "days": "Tage",
-      "hours": "Studen",
-      "minutes": "Minuten",
-      "seconds": "Sekunden"
+      "hero": {
+        "subtitle": "heiraten.",
+        "days": "Tage",
+        "hours": "Studen",
+        "minutes": "Minuten",
+        "seconds": "Sekunden"
+      },
+      "tabs": {
+        "our-story": "Unsere Story",
+        "our-wedding": "Unsere Hochzeit",
+        "itinerary": "Zeitplan",
+        "travel": "Hinflug",
+        "things-to-do": "Aktivitäten",
+        "gifts-registry": "Geschenke",
+        "rsvp": "Zusagen",
+        "faq": "Fragen & Antworten"
+      },
+      "our-story": {
+        "title": "Unsere Story",
+        "body": "test"
+      }
     }
   }
 }

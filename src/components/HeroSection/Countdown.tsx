@@ -15,16 +15,16 @@ export const MyCountdown = (): ReactElement => {
       return (
         <Group mt={16}>
           <Body className={styles.dateText}>
-            {days} {t('days')}
+            {days} {t('hero.days')}
           </Body>
           <Body className={styles.dateText}>
-            {hours} {t('hours')}
+            {hours} {t('hero.hours')}
           </Body>
           <Body className={styles.dateText}>
-            {minutes} {t('minutes')}
+            {minutes} {t('hero.minutes')}
           </Body>
           <Body className={styles.dateText}>
-            {seconds} {t('seconds')}
+            {seconds} {t('hero.seconds')}
           </Body>
         </Group>
       );

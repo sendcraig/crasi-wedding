@@ -17,6 +17,7 @@ import { FAQ } from '../sections/FAQ';
 import festivalOfLightsImage from '../../assets/images/festivalOfLights.jpg';
 import croatiaImage from '../../assets/images/croatia.webp';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { useTranslation } from 'react-i18next';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -63,6 +64,8 @@ export const InfoWebsite = (): ReactNode => {
 
   const { ref: tabIntsersectionRef, entry } = useIntersection({ threshold: 1 });
 
+  const { t } = useTranslation();
+
   return (
     <MantineProvider theme={theme}>
       <ParallaxProvider>
@@ -85,56 +88,56 @@ export const InfoWebsite = (): ReactNode => {
                 onClick={() => ourStoryScroll()}
                 className={styles.tab}
               >
-                Our Story
+                {t('tabs.our-story')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'wedding-details'}
                 onClick={() => ourWeddingScroll()}
                 className={styles.tab}
               >
-                Our Wedding
+                {t('tabs.our-wedding')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'itinerary'}
                 onClick={() => itineraryScroll()}
                 className={styles.tab}
               >
-                Itinerary
+                {t('tabs.itinerary')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'travel'}
                 onClick={() => travelScroll()}
                 className={styles.tab}
               >
-                Travel
+                {t('tabs.travel')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'things-to-do'}
                 onClick={() => thingsToDoScroll()}
                 className={styles.tab}
               >
-                Things To Do
+                {t('tabs.things-to-do')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'gifts-registry'}
                 onClick={() => giftsRegistryScroll()}
                 className={styles.tab}
               >
-                Gifts & Registry
+                {t('tabs.gifts-registry')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'rsvp'}
                 onClick={() => rsvpScroll()}
                 className={styles.tab}
               >
-                RSVP
+                {t('tabs.rsvp')}
               </Tabs.Tab>
               <Tabs.Tab
                 value={'faq'}
                 onClick={() => faqScroll()}
                 className={styles.tab}
               >
-                FAQ
+                {t('tabs.faq')}
               </Tabs.Tab>
             </Tabs.List>
           </Tabs>

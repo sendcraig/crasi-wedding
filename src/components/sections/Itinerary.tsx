@@ -15,6 +15,7 @@ import cx from 'classnames';
 import { useParallaxAspectRation } from '../../hooks/useParallaxAspectRatio';
 import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 import { useWindowEvent } from '@mantine/hooks';
+import { useTranslation } from 'react-i18next';
 
 type ItineraryInfo = {
   date: string;
@@ -27,47 +28,42 @@ type ItineraryInfo = {
 
 const ITINERARY_INFO: ItineraryInfo = [
   {
-    date: 'Friday, September 27th',
+    date: 'friday',
     events: [
       {
-        title: 'Evening Social',
-        trailing: 'Location TBD',
-        details:
-          "For those who have already arrived in Chania, we'd love to grab a drink with you at a local bar. Attendance is entirely optional and vibes are casual. Come as you are!",
+        title: 'evening-social.name',
+        trailing: 'evening-social.note',
+        details: 'evening-social.body',
       },
     ],
   },
   {
-    date: 'Saturday, September 28th',
+    date: 'saturday',
     events: [
       {
-        title: 'Family Brunch',
-        trailing: 'Family members only',
-        details:
-          'For friends, Saturday is free to explore Chania and the beautiful surrounding area. For the families, we will host a light brunch in the villa where we will be staying.',
+        title: 'family-brunch.name',
+        trailing: 'family-brunch.note',
+        details: 'family-brunch.body',
       },
     ],
   },
   {
-    date: 'Sunday, September 29th',
+    date: 'sunday',
     events: [
       {
-        title: 'Ceremony',
-        trailing: 'Cambos Estate',
-        details:
-          'The ceremony will be held in a romantic olive grove on a farm southeast of Chania. Transportation will be available to shuttle guests to and from the venue.',
+        title: 'ceremony.name',
+        trailing: 'ceremony.note',
+        details: 'ceremony.body',
       },
       {
-        title: 'Cocktail Hour',
-        trailing: 'Cyprus Trees',
-        details:
-          'Immediately following the ceremony, a cocktail hour will be held in the Cyprus trees near the venue’s entrance. The bride & groom will take several million photos at this time.',
+        title: 'cocktail-hour.name',
+        trailing: 'cocktail-hour.note',
+        details: 'cocktail-hour.body',
       },
       {
-        title: 'Dinner & Reception',
-        trailing: 'Main Lawn',
-        details:
-          'The dinner and reception will be held on the main lawn at Cambos Estate. Speeches, music, dancing, and other wedding shenanigans will take place under the setting sun and continue into the night.',
+        title: 'dinner-reception.name',
+        trailing: 'dinner-reception.note',
+        details: 'dinner-reception.body',
       },
     ],
   },
@@ -102,6 +98,7 @@ type Props = {
 };
 
 export const Itinerary = ({ scrollRef }: Props): ReactElement => {
+  const { t } = useTranslation();
   const { isSmallWidth } = useDeviceWidth();
   const { imageRef, aspectRatio } = useParallaxAspectRation();
   const [maxImageHeight, setMaxImageHeight] = useState(0);
@@ -131,11 +128,11 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
           pr={isSmallWidth ? 48 : 96}
         >
           <Stack py={64} gap={32} ref={textRef}>
-            <SectionTitle>Itinerary</SectionTitle>
+            <SectionTitle>{t('itinerary.title')}</SectionTitle>
             {ITINERARY_INFO.map((date) => (
               <Stack gap={0} key={`${date.date}`}>
                 <SubHeading className={styles.date} justify>
-                  {date.date}
+                  {t(`itinerary.${date.date}`)}
                 </SubHeading>
                 {date.events.map((event) => (
                   <Stack
@@ -144,10 +141,10 @@ export const Itinerary = ({ scrollRef }: Props): ReactElement => {
                     pb={16}
                   >
                     <EventDetails
-                      title={event.title}
-                      trailing={event.trailing}
+                      title={t(`itinerary.${event.title}`)}
+                      trailing={t(`itinerary.${event.trailing}`)}
                     />
-                    <Body justify>{event.details}</Body>
+                    <Body justify>{t(`itinerary.${event.details}`)}</Body>
                   </Stack>
                 ))}
               </Stack>

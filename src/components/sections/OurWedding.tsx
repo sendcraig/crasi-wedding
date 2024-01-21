@@ -14,13 +14,17 @@ import { useDeviceWidth } from '../../hooks/useDeviceWidth';
 import { Link } from '../Link/Link';
 import { hasTouchSupport } from '../utils';
 import { CalendarLink } from '../Link/CalendarLink';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   scrollRef?: React.RefObject<HTMLDivElement>;
 };
 
 export const OurWedding = ({ scrollRef }: Props): ReactElement => {
+  const { t } = useTranslation();
   const { isXSmallWidth } = useDeviceWidth();
+
+  console.log('test', t('our-wedding.title'));
 
   return (
     <InfoSection
@@ -43,20 +47,20 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
             justify={'space-evenly'}
             className={styles.textContainer}
           >
-            <SectionTitle>Our Wedding</SectionTitle>
-            <BodyStretch>is on the</BodyStretch>
+            <SectionTitle>{t('our-wedding.title')}</SectionTitle>
+            <BodyStretch>{t('our-wedding.is-on')}</BodyStretch>
             <SubHeadingLight
               className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}
             >
-              <CalendarLink text={'29th of September, 2024'} />
+              <CalendarLink text={t('our-wedding.date')} />
             </SubHeadingLight>
-            <BodyStretch>at</BodyStretch>
+            <BodyStretch>{t('our-wedding.at')}</BodyStretch>
             <SubHeadingLight
               className={cx({ [boldStyles.boldOnHover]: !hasTouchSupport() })}
             >
               <Link
                 url={'https://maps.app.goo.gl/b7e7xYdP1ypEaHDN8'}
-                text={'Cambos Estate, Chania, Greece'}
+                text={t('our-wedding.location')}
               />
             </SubHeadingLight>
           </Stack>
