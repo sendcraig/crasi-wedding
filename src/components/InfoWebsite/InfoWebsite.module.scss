@@ -97,9 +97,12 @@
   width: 100vw;
   height: 105vh;
   z-index: 0;
+  overflow: hidden;
+
 }
+
 .contentContainer {
-  max-width: 1800px;
+  max-width: min(1800px, 100vw);
   margin-top: -105vh;
   z-index: 1;
   box-shadow: 1px 4px 20px -8px rgba(0,0,0,0.1);
