@@ -41,7 +41,7 @@ export const ThingsToDo = ({ scrollRef }: Props): ReactElement => {
               key={`things-to-do-section-${idx}`}
             >
               <Center>
-                <Stack>
+                <Stack mt={isXSmallWidth && idx !== 0 ? 72 : 0}>
                   <SubHeading center>
                     {t(`things-to-do.${section.title}`)}
                   </SubHeading>

@@ -24,8 +24,6 @@ export const OurWedding = ({ scrollRef }: Props): ReactElement => {
   const { t } = useTranslation();
   const { isXSmallWidth } = useDeviceWidth();
 
-  console.log('test', t('our-wedding.title'));
-
   return (
     <InfoSection
       scrollRef={scrollRef}

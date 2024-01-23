@@ -18,6 +18,7 @@ import festivalOfLightsImage from '../../assets/images/festivalOfLights.jpg';
 import croatiaImage from '../../assets/images/croatia.webp';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { useTranslation } from 'react-i18next';
+import { Footer } from '../sections/Footer';
 
 const theme = createTheme({
   fontFamily: 'Josefin Sans',
@@ -162,6 +163,7 @@ export const InfoWebsite = (): ReactNode => {
                 imageClassName={styles.croatiaImage}
               />
               <FAQ scrollRef={faqScrollRef} />
+              <Footer />
             </div>
           </div>
         </Stack>

@@ -95,12 +95,12 @@
   background: linear-gradient(300deg, #d2d7cd, #fbf9f6, #ceceba) fixed;
   background-size: 150% 150%;
   width: 100vw;
-  height: 100vh;
+  height: 105vh;
   z-index: 0;
 }
 .contentContainer {
   max-width: 1800px;
-  margin-top: -100vh;
+  margin-top: -105vh;
   z-index: 1;
   box-shadow: 1px 4px 20px -8px rgba(0,0,0,0.1);
 }
